@@ -1,0 +1,36 @@
+
+<div class="card">
+    <p-carousel [value]="events" [numVisible]="3" [numScroll]="3" [circular]="true" [responsiveOptions]="responsiveOptions" autoPlayInterval="3000">
+        <ng-template let-events pTemplate="item">
+            <!-- <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
+                <div class="mb-3">
+                    <img src="https://primefaces.org/cdn/primeng/images/demo/product/{{ events.image }}" [alt]="events.name" class="w-6 shadow-2" />
+                </div>
+                <div>
+                    <h4 class="mb-1">{{ events.name }}</h4>
+                    <h6 class="mt-0 mb-3">{{ '$' + events.price }}</h6>
+                    <p-tag [value]="events.inventoryStatus" [severity]="getSeverity(events.inventoryStatus)"></p-tag>
+                    <div class="car-buttons mt-5">
+                        <p-button type="button" styleClass="p-button p-button-rounded mr-2" icon="pi pi-search"></p-button>
+                        <p-button type="button" styleClass="p-button-success p-button-rounded mr-2" icon="pi pi-star-fill"></p-button>
+                    </div>
+                </div>
+            </div> -->
+            <div class="w-[250px] h-[430px] rounded-[24px] bg-[#141627] card-items">
+                <div class="mb-3">
+                    <img src="assets/images/Events/{{ events.image }}" [alt]="events.name" class="shadow-2 w-[230px] h-[215px] rounded-[19px]" />
+                </div>
+                <h4 class="mb-1 text-center">{{ events.title }}</h4>
+                <div class="text-left text-[14px] flex flex-col">
+                    <p>Date:{{events.date}}</p>
+                <p>Participants:{{events.participants}}</p>
+                <p>Location:{{events.location}}</p>
+                <p class="mt-0 mb-3">Cost:{{ '$' + events.cost }}</p>
+                <div class="self-center">
+                    <button (click)="onclickJoin(events.id)" class="rounded-[14px] btn bg-[#BB4E35] font-bold" >Full</button>
+                </div>
+                </div>
+            </div>
+        </ng-template>
+    </p-carousel>
+</div>

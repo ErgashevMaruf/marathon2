@@ -4,10 +4,14 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { fuseAnimations } from '@fuse/animations';
 import { FuseAlertType } from '@fuse/components/alert';
 import { AuthService } from 'app/core/auth/auth.service';
-
+interface City {
+    name: string;
+    code: string;
+}
 @Component({
     selector     : 'auth-sign-in',
     templateUrl  : './sign-in.component.html',
+    styleUrls  : ['./sign-in.style.scss'],
     encapsulation: ViewEncapsulation.None,
     animations   : fuseAnimations
 })
@@ -21,7 +25,9 @@ export class AuthSignInComponent implements OnInit
     };
     signInForm: UntypedFormGroup;
     showAlert: boolean = false;
+    cities: City[];
 
+    selectedCity: City;
     /**
      * Constructor
      */
@@ -43,6 +49,11 @@ export class AuthSignInComponent implements OnInit
      */
     ngOnInit(): void
     {
+        this.cities = [
+            { name: 'UZB', code: 'NY' },
+            { name: 'RUS', code: 'RM' },
+            { name: 'ENG', code: 'LDN' },
+        ];
         // Create the form
         this.signInForm = this._formBuilder.group({
             email     : ['hughes.brian@company.com', [Validators.required, Validators.email]],
