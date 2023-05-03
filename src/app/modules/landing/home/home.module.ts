@@ -7,9 +7,11 @@ import { LandingHomeComponent } from 'app/modules/landing/home/home.component';
 import { landingHomeRoutes } from 'app/modules/landing/home/home.routing';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DropdownModule } from 'primeng/dropdown';
+import { AnnouncementComponent } from './announcement/announcement.component';
 @NgModule({
     declarations: [
-        LandingHomeComponent
+        LandingHomeComponent,
+        AnnouncementComponent
     ],
     imports     : [
         RouterModule.forChild(landingHomeRoutes),

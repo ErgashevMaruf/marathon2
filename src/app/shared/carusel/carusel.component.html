@@ -16,17 +16,17 @@
                     </div>
                 </div>
             </div> -->
-            <div class="w-[250px] h-[460px] rounded-[24px] card-items bg-white">
+            <div class="w-[300px] h-[450px] rounded-[24px] overflow-hidden card-items bg-white shadow-[0_3px_6x_rgba(0, 0, 0, 0.16)]">
                 <div class="mb-3">
-                    <img src="assets/images/Events/{{ events.image }}" [alt]="events.name" class="shadow-2 w-full h-[215px]" />
+                    <img src="assets/images/Events/{{ events.image }}"  [alt]="events.name" class="shadow-2 h-[215px] object-cover" />
                 </div>
                 <h4 class="mb-1 text-center font-bold">{{ events.title }}</h4>
-                <div class="text-left text-[14px] flex flex-col ml-[28px]">
-                    <p>Date:{{events.date}}</p>
-                <p>Participants:{{events.participants}}</p>
-                <p>Location:{{events.location}}</p>
-                <p class="mt-0 mb-3">Cost:{{ '$' + events.cost }}</p>
-                    <button (click)="onclickJoin(events.id)" class="rounded-[14px] btn bg-[#01A559] text-white font-bold mx-[28px]" >Join Us</button>
+                <div class="text-left text-[14px] flex flex-col ml-[28px] gap-[8px]">
+                    <p class="font-bold">Date:<span class="font-normal">{{events.date}}</span></p>
+                <p class="font-bold">Participants:<span class="font-normal">{{events.participants}}</span></p>
+                <p class="font-bold">Location:<span class="font-normal">{{events.participants}}</span></p>
+                <p class="mt-0 mb-3 font-bold">Cost:<span class="font-normal">{{ '$' + events.cost }}</span></p>
+                    <button (click)="onclickJoin(events.id)" class="rounded-[14px] btn bg-[#01A559] text-white font-bold mr-[25px]" >Join Us</button>
                 </div>
             </div>
         </ng-template>
