@@ -27,7 +27,8 @@ import { ScoreComponent } from './score/score.component';
         FormsModule,
         ReactiveFormsModule,
         CaruselComponent,
-        FooterComponent
+        FooterComponent,
+        ScoreComponent
     ]
 })
 export class SharedModule

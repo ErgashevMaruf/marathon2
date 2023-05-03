@@ -2,13 +2,13 @@
 <div class="card">
     <p-table
         #dt2
-        [value]="customers"
+        [value]="score"
         dataKey="id"
         [rows]="10"
         [showCurrentPageReport]="true"
         [rowsPerPageOptions]="[10, 25, 50]"
         [loading]="loading"
-        [paginator]="true"
+        [scrollable]="true"
         currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
         [globalFilterFields]="['name', 'country.name', 'representative.name', 'status']"
         [tableStyle]="{ 'min-width': '75rem' }"
@@ -23,33 +23,6 @@
         </ng-template>
         <ng-template pTemplate="header">
             <tr>
-                <th style="width:22%">Name</th>
-                <th style="width:22%">Country</th>
-                <th style="width:22%">Agent</th>
-                <th style="width:22%">Status</th>
-                <th style="width:12%">Verified</th>
-            </tr>
-            <tr>
-                <th>
-                    <p-columnFilter type="text" field="name"></p-columnFilter>
-                </th>
-                <th>
-                    <p-columnFilter type="text" field="country.name"></p-columnFilter>
-                </th>
-                <th>
-                    <p-columnFilter field="representative" matchMode="in" [showMenu]="false">
-                        <ng-template pTemplate="filter" let-value let-filter="filterCallback">
-                            <p-multiSelect [ngModel]="value" [options]="representatives" placeholder="Any" (onChange)="filter($event.value)" optionLabel="name">
-                                <ng-template let-option pTemplate="item">
-                                    <div class="inline-block vertical-align-middle">
-                                        <img [alt]="option.label" src="https://primefaces.org/cdn/primeng/images/demo/avatar/{{ option.image }}" width="24" class="vertical-align-middle" />
-                                        <span class="ml-1 mt-1">{{ option.name }}</span>
-                                    </div>
-                                </ng-template>
-                            </p-multiSelect>
-                        </ng-template>
-                    </p-columnFilter>
-                </th>
                 <th>
                     <p-columnFilter field="status" matchMode="equals" [showMenu]="false">
                         <ng-template pTemplate="filter" let-value let-filter="filterCallback">
@@ -61,29 +34,28 @@
                         </ng-template>
                     </p-columnFilter>
                 </th>
-                <th>
-                    <p-columnFilter type="boolean" field="verified"></p-columnFilter>
-                </th>
             </tr>
         </ng-template>
-        <ng-template pTemplate="body" let-customer>
+        <ng-template pTemplate="body" let-score>
             <tr>
                 <td>
-                    {{ customer.name }}
+                    score
                 </td>
                 <td>
-                    <img src="https://primefaces.org/cdn/primeng/images/demo/flag/flag_placeholder.png" [class]="'flag flag-' + customer.country.code" style="width: 20px" />
-                    <span class="ml-1 vertical-align-middle">{{ customer.country.name }}</span>
+                    {{ score.name }}
                 </td>
                 <td>
-                    <img [alt]="customer.representative.name" src="https://primefaces.org/cdn/primeng/images/demo/avatar/{{ customer.representative.image }}" width="32" style="vertical-align: middle" />
-                    <span class="ml-1 vertical-align-middle">{{ customer.representative.name }}</span>
+                    <span class="ml-1 vertical-align-middle">{{ score.title}}</span>
                 </td>
                 <td>
-                    <p-tag [value]="customer.status" [severity]="getSeverity(customer.status)"></p-tag>
+                    <span class="ml-1 vertical-align-middle">{{ score.location}}</span>
                 </td>
                 <td>
-                    <i class="pi" [ngClass]="{ 'text-green-500 pi-check-circle': customer.verified, 'text-red-500 pi-times-circle': !customer.verified }"></i>
+                    <!-- <p-tag [value]="customer.status" [severity]="getSeverity(score.date)"></p-tag> -->
+                    <span class="ml-1 vertical-align-middle">{{ score.date}}</span>
+                </td>
+                <td>
+                    <span class="ml-1 vertical-align-middle">{{ score.distance}}</span>
                 </td>
             </tr>
         </ng-template>

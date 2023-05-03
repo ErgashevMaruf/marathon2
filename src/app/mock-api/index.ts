@@ -23,6 +23,7 @@ import { TasksMockApi } from 'app/mock-api/apps/tasks/api';
 import { UserMockApi } from 'app/mock-api/common/user/api';
 import { EventsMockApi } from './events/api';
 import { AnnouncementsMockApi } from './announcements/api';
+import { ScoreMockApi } from './score/api';
 export const mockApiServices = [
     AcademyMockApi,
     ActivitiesMockApi,
@@ -48,5 +49,6 @@ export const mockApiServices = [
     TasksMockApi,
     UserMockApi,
     EventsMockApi,
-    AnnouncementsMockApi
+    AnnouncementsMockApi,
+    ScoreMockApi
 ];
