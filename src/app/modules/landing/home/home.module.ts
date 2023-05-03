@@ -5,7 +5,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { SharedModule } from 'app/shared/shared.module';
 import { LandingHomeComponent } from 'app/modules/landing/home/home.component';
 import { landingHomeRoutes } from 'app/modules/landing/home/home.routing';
-
+import {MatDialogModule} from '@angular/material/dialog';
+import { DropdownModule } from 'primeng/dropdown';
 @NgModule({
     declarations: [
         LandingHomeComponent
@@ -14,7 +15,9 @@ import { landingHomeRoutes } from 'app/modules/landing/home/home.routing';
         RouterModule.forChild(landingHomeRoutes),
         MatButtonModule,
         MatIconModule,
-        SharedModule
+        SharedModule,
+        DropdownModule,
+        MatDialogModule
     ]
 })
 export class LandingHomeModule

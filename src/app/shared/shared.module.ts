@@ -4,19 +4,23 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CaruselComponent } from './carusel/carusel.component';
 import { CarouselModule } from 'primeng/carousel';
 import { FooterComponent } from './footer/footer.component';
-import {MatIconModule} from '@angular/material/icon'
+import {MatIconModule} from '@angular/material/icon';
+import { TableModule } from 'primeng/table';
+import { ScoreComponent } from './score/score.component';
 
 @NgModule({
     declarations:[
         CaruselComponent,
-        FooterComponent
+        FooterComponent,
+        ScoreComponent
     ],
     imports: [
         CommonModule,
         FormsModule,
         ReactiveFormsModule,
         CarouselModule,
-        MatIconModule
+        MatIconModule,
+        TableModule
     ],
     exports: [
         CommonModule,

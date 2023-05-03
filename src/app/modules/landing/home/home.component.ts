@@ -1,16 +1,31 @@
-import { Component, ViewEncapsulation } from '@angular/core';
-
+import { Component, ViewEncapsulation,OnInit } from '@angular/core';
+interface City {
+    name: string;
+    code: string;
+}
 @Component({
     selector     : 'landing-home',
     templateUrl  : './home.component.html',
+    styleUrls  : ['./home.style.scss'],
     encapsulation: ViewEncapsulation.None
 })
-export class LandingHomeComponent
+export class LandingHomeComponent implements OnInit
 {
     /**
      * Constructor
      */
+    cities: City[];
+
+    selectedCity: City;
     constructor()
     {
     }
+    ngOnInit(): void {
+        this.cities = [
+            { name: 'UZB', code: 'NY' },
+            { name: 'RUS', code: 'RM' },
+            { name: 'ENG', code: 'LDN' },
+        ];
+    }
+
 }

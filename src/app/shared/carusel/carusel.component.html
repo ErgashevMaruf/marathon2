@@ -16,19 +16,17 @@
                     </div>
                 </div>
             </div> -->
-            <div class="w-[250px] h-[430px] rounded-[24px] card-items">
+            <div class="w-[250px] h-[460px] rounded-[24px] card-items bg-white">
                 <div class="mb-3">
-                    <img src="assets/images/Events/{{ events.image }}" [alt]="events.name" class="shadow-2 w-[230px] h-[215px] rounded-[19px]" />
+                    <img src="assets/images/Events/{{ events.image }}" [alt]="events.name" class="shadow-2 w-full h-[215px]" />
                 </div>
-                <h4 class="mb-1 text-center">{{ events.title }}</h4>
-                <div class="text-left text-[14px] flex flex-col">
+                <h4 class="mb-1 text-center font-bold">{{ events.title }}</h4>
+                <div class="text-left text-[14px] flex flex-col ml-[28px]">
                     <p>Date:{{events.date}}</p>
                 <p>Participants:{{events.participants}}</p>
                 <p>Location:{{events.location}}</p>
                 <p class="mt-0 mb-3">Cost:{{ '$' + events.cost }}</p>
-                <div class="self-center">
-                    <button (click)="onclickJoin(events.id)" class="rounded-[14px] btn bg-[#BB4E35] font-bold" >Full</button>
-                </div>
+                    <button (click)="onclickJoin(events.id)" class="rounded-[14px] btn bg-[#01A559] text-white font-bold mx-[28px]" >Join Us</button>
                 </div>
             </div>
         </ng-template>

@@ -1,0 +1,67 @@
+
+
+<!-- ****************************************************** -->
+<div class="bg-white w-full py-40px">
+    <!-- Navigation start -->
+<div  class="flex justify-between max-w-screen-xl mx-auto nav py-[30px] items-center h-[119px] shadow-[0_3px_6x_rgba(0, 0, 0, 0.16)]">
+    <div class="nav__left flex items-center">
+        <img src="./assets/images/logo/navLogo.png" alt="" class="w-[116px] h-[116px]">
+        <div class="w-[152px] font-semibold">
+            <p>Sog'lomlashtirish onlayn platformasi</p>
+        </div>
+    </div>
+    <div class="nav__center">
+        <ul class="flex gap-[40px] items-center">
+            <li><a href="#" class="cool-link">Yangiliklar</a></li>
+            <li><a href="#" class="cool-link">Natija</a></li>
+            <li><a href="#" class="cool-link">Ishtirokchilar</a></li>
+            <li><a href="#" class="cool-link">Tashkilotchilar</a></li>
+            <li><a href="#" class="cool-link">Media</a></li>
+        </ul>
+    </div>
+    <div class="nav__right flex items-center gap-[10px]">
+        <div class="w-[30px] h-[30px] bg-[#02A3D3] rounded-[6px] gap-[30px] flex justify-center items-center">
+            <mat-icon class="text-[white]">remove_red_eye</mat-icon>
+        </div>
+        <div class="bg-[#02A3D3] flex justify-center items-center w-[30px] h-[30px] rounded-[6px]">
+            <img src="./assets/icons/disturb.png" alt="" class="w-[20px] h-[20px]">
+        </div>
+        <div class="border-r-[2px] border-[#00000029] h-[30px]"></div>
+        <div class="card flex justify-content-center">
+            <p-dropdown [options]="cities" [(ngModel)]="selectedCity" optionLabel="name">
+            </p-dropdown>
+        </div>
+        <div class="border-r-[2px] border-[#00000029] h-[30px]"></div>
+        <div class="flex gap-[10px] cursor-pointer">
+            <a [routerLink]="['/sign-in']">
+                <mat-icon class="text-[#02A3D3] text-[30px]">account_circle</mat-icon>
+            </a>
+            <a class="font-semibold text-[16px]" [routerLink]="['/sign-in']">Kirish</a>
+        </div>
+    </div>
+</div>
+<!-- Navigation End -->
+<!-- Banner Start-->
+<div class="banner">
+    <img src="./assets/images/ui/angular-material/scenes/banner.png" alt="">
+</div>
+<!-- Banner end -->
+<!-- Main start -->
+<div class="bg-[#F5F5F5] py-[60px] ">
+    <div class="max-w-screen-xl mx-auto flex justify-between">
+        <div class="main__left max-w-[1100px] bg-[#F5F5F5]">
+            <p class="font-bold text-[35px] mb-[30px]">Yangiliklar</p>
+            <app-carusel></app-carusel>
+        </div>
+        <div class="advertise mt-[50px]">
+            <img src="./assets/images/advertise/advertise.png" alt="" class="">
+        </div>
+    </div>
+</div>
+
+
+
+
+
+</div>
+<!-- Main end -->
