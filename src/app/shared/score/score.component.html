@@ -1,68 +1,62 @@
-
-<div class="card">
-    <p-table
-        #dt2
-        [value]="score"
-        dataKey="id"
-        [rows]="10"
-        [showCurrentPageReport]="true"
-        [rowsPerPageOptions]="[10, 25, 50]"
-        [loading]="loading"
-        [scrollable]="true"
-        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
-        [globalFilterFields]="['name', 'country.name', 'representative.name', 'status']"
-        [tableStyle]="{ 'min-width': '75rem' }"
-        >
-        <ng-template pTemplate="caption">
-            <div class="flex">
-                <span class="p-input-icon-left ml-auto">
-                    <i class="pi pi-search"></i>
-                    <input pInputText type="text" (input)="dt2.filterGlobal($event.target.value, 'contains')" placeholder="Search keyword" />
-                </span>
-            </div>
-        </ng-template>
-        <ng-template pTemplate="header">
-            <tr>
-                <th>
-                    <p-columnFilter field="status" matchMode="equals" [showMenu]="false">
-                        <ng-template pTemplate="filter" let-value let-filter="filterCallback">
-                            <p-dropdown [ngModel]="value" [options]="statuses" (onChange)="filter($event.value)" placeholder="Any" [showClear]="true">
-                                <ng-template let-option pTemplate="item">
-                                    <p-tag [value]="option.value" [severity]="getSeverity(option.label)"></p-tag>
-                                </ng-template>
-                            </p-dropdown>
-                        </ng-template>
-                    </p-columnFilter>
-                </th>
-            </tr>
-        </ng-template>
-        <ng-template pTemplate="body" let-score>
-            <tr>
-                <td>
-                    score
-                </td>
-                <td>
-                    {{ score.name }}
-                </td>
-                <td>
-                    <span class="ml-1 vertical-align-middle">{{ score.title}}</span>
-                </td>
-                <td>
-                    <span class="ml-1 vertical-align-middle">{{ score.location}}</span>
-                </td>
-                <td>
-                    <!-- <p-tag [value]="customer.status" [severity]="getSeverity(score.date)"></p-tag> -->
-                    <span class="ml-1 vertical-align-middle">{{ score.date}}</span>
-                </td>
-                <td>
-                    <span class="ml-1 vertical-align-middle">{{ score.distance}}</span>
-                </td>
-            </tr>
-        </ng-template>
-        <ng-template pTemplate="emptymessage">
-            <tr>
-                <td colspan="5">No customers found.</td>
-            </tr>
-        </ng-template>
-    </p-table>
-</div>
+<p-table [value]="scores" [tableStyle]="{'max-width': '400px'}">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>
+                <p-columnFilter field="title" matchMode="equals" [showMenu]="false">
+                    <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+                        <p-dropdown [ngModel]="value" [options]="scores" optionLabel="title" (onChange)="filter($event.value?.title===null ? $event.value :$event.value.title)" placeholder="Any" [showClear]="true">
+                            <ng-template let-option pTemplate="item">
+                                <p-tag [value]="option.title"></p-tag>
+                            </ng-template>
+                        </p-dropdown>
+                    </ng-template>
+                </p-columnFilter>
+            </th>
+            <th>
+                <p-columnFilter field="date" matchMode="contains" [showMenu]="false">
+                    <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+                        <p-dropdown [ngModel]="value" [options]="scores" optionLabel="date" (onChange)="filter($event.value?.date.getFullYear()==null ? $event.value : $event.value.date.getFullYear())" placeholder="Any" [showClear]="true">
+                            <ng-template let-option pTemplate="item">
+                                <p-tag [value]="option.date.getFullYear()"></p-tag>
+                            </ng-template>
+                        </p-dropdown>
+                    </ng-template>
+                </p-columnFilter>
+            </th>
+            <th>
+                <p-columnFilter field="date" matchMode="equals" [showMenu]="false">
+                    <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+                        <p-dropdown [ngModel]="value" [options]="scores" optionLabel="title" (onChange)="filter($event.value?.title===null ? $event.value :$event.value.title)" placeholder="Any" [showClear]="true">
+                            <ng-template let-option pTemplate="item">
+                                <p-tag [value]="option.title"></p-tag>
+                            </ng-template>
+                        </p-dropdown>
+                    </ng-template>
+                </p-columnFilter>
+            </th>
+            <th>
+                <p-columnFilter field="location" matchMode="equals" [showMenu]="false">
+                    <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+                        <p-dropdown [ngModel]="value" [options]="scores" optionLabel="title" (onChange)="filter($event.value?.location==null ? $event.value :$event.value.location)" placeholder="Any" [showClear]="true">
+                            <ng-template let-option pTemplate="item">
+                                <p-tag [value]="option.location"></p-tag>
+                            </ng-template>
+                        </p-dropdown>
+                    </ng-template>
+                </p-columnFilter>
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-scores>
+        <tr>
+            <td>{{1}}</td>
+            <td>{{scores.title}}</td>
+            <td>{{scores.id}}</td>
+            <td>{{scores.location}}</td>
+            <td>{{scores.date | date:'dd.MM.yyyy'}}</td>
+            <td>{{scores.distance}}</td>
+        </tr>
+    </ng-template>
+</p-table>
+<!-- <p-dropdown [options]="score" [(ngModel)]="selectedCity" optionLabel="title"></p-dropdown> -->
+<input type="date" >

@@ -23,7 +23,7 @@ export class CaruselComponent implements OnInit {
        this.responsiveOptions = [
             {
                 breakpoint: '1199px',
-                numVisible: 1,
+                numVisible: 3,
                 numScroll: 1
             },
             {
@@ -37,17 +37,6 @@ export class CaruselComponent implements OnInit {
                 numScroll: 1
             }
         ];
-    }
-
-    getSeverity(status: string) {
-        switch (status) {
-            case 'INSTOCK':
-                return 'success';
-            case 'LOWSTOCK':
-                return 'warning';
-            case 'OUTOFSTOCK':
-                return 'danger';
-        }
     }
 
 }

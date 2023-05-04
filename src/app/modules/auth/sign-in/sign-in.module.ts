@@ -14,8 +14,8 @@ import { authSignInRoutes } from 'app/modules/auth/sign-in/sign-in.routing';
 
 @NgModule({
     declarations: [
-        AuthSignInComponent
-    ],
+        AuthSignInComponent,
+   ],
     imports     : [
         RouterModule.forChild(authSignInRoutes),
         MatButtonModule,

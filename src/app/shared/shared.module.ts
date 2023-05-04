@@ -7,7 +7,8 @@ import { FooterComponent } from './footer/footer.component';
 import {MatIconModule} from '@angular/material/icon';
 import { TableModule } from 'primeng/table';
 import { ScoreComponent } from './score/score.component';
-
+import { DropdownModule } from 'primeng/dropdown';
+import { TagModule } from 'primeng/tag';
 @NgModule({
     declarations:[
         CaruselComponent,
@@ -20,7 +21,9 @@ import { ScoreComponent } from './score/score.component';
         ReactiveFormsModule,
         CarouselModule,
         MatIconModule,
-        TableModule
+        TableModule,
+        DropdownModule,
+        TagModule
     ],
     exports: [
         CommonModule,

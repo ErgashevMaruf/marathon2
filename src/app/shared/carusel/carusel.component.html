@@ -1,6 +1,6 @@
 
 <div class="card">
-    <p-carousel [value]="events" [numVisible]="3" [numScroll]="3" [circular]="true" [responsiveOptions]="responsiveOptions" autoPlayInterval="3000">
+    <p-carousel [value]="events" [numVisible]="4" [numScroll]="3" [circular]="true" [responsiveOptions]="responsiveOptions" autoPlayInterval="3000">
         <ng-template let-events pTemplate="item">
             <!-- <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
                 <div class="mb-3">
@@ -16,7 +16,7 @@
                     </div>
                 </div>
             </div> -->
-            <div class="w-[300px] h-[450px] rounded-[24px] overflow-hidden card-items bg-white shadow-[0_3px_6x_rgba(0, 0, 0, 0.16)]">
+            <div class="w-[300px] h-[450px] rounded-[10px] overflow-hidden card-items bg-white shadow-[0_3px_6x_rgba(0, 0, 0, 0.16)]">
                 <div class="mb-3">
                     <img src="assets/images/Events/{{ events.image }}"  [alt]="events.name" class="shadow-2 h-[215px] object-cover" />
                 </div>
