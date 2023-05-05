@@ -3,7 +3,7 @@
 
 <!-- Navigation -->
 <fuse-vertical-navigation
-    class="dark bg-gray-900 print:hidden"
+    class="bg-[#F5F5F5] print:hidden"
     [mode]="isScreenSmall ? 'over' : 'side'"
     [name]="'mainNavigation'"
     [navigation]="navigation.default"
@@ -11,17 +11,16 @@
     <!-- Navigation header hook -->
     <ng-container fuseVerticalNavigationContentHeader>
         <!-- Logo -->
-        <div class="flex items-center h-20 p-6 pb-0">
+        <div class="flex items-center h-20 p-6 pb-0 mb-[30px]">
             <!-- Light version -->
             <img
                 class="dark:hidden w-30"
-                src="assets/images/logo/logo-text.svg"
+                src="assets/images/logo/navLogo.png"
                 alt="Logo image">
             <!-- Dark version -->
-            <img
-                class="hidden dark:flex w-30"
-                src="assets/images/logo/logo-text-on-dark.svg"
-                alt="Logo image">
+            <div>
+                <p class="text-[12px] font-normal text-[#333333]">Sog'lomlashtirish onlayn platformasi</p>
+            </div>
         </div>
     </ng-container>
 </fuse-vertical-navigation>
@@ -53,8 +52,7 @@
     </div>
 
     <!-- Footer -->
-    <div class="relative flex flex-0 items-center justify-start w-full h-14 px-4 md:px-6 z-49 border-t bg-card dark:bg-transparent print:hidden">
-        <span class="font-medium text-secondary">Fuse &copy; {{currentYear}}</span>
-    </div>
-
+    <div class="bg-black px-[40px]">
+    <app-footer></app-footer>
+</div>
 </div>

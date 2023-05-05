@@ -10,7 +10,7 @@ export const score =[
     {
         id: 1012039100,
         title:'Bekabad Marathon',
-        date:'05/04/2023',
+        date:'09/04/2023',
         location:'Bekabad',
         distance:11,
         status:'qualified'
@@ -18,7 +18,7 @@ export const score =[
     {
         id: 1012039100,
         title:'Bekabad Marathon',
-        date:'05/04/2027',
+        date:'08/04/2027',
         location:'Bekabad',
         distance:11,
         status:'qualified'
@@ -26,7 +26,7 @@ export const score =[
     {
         id: 1012039100,
         title:'Bekabad Marathon',
-        date:'05/04/2028',
+        date:'07/04/2028',
         location:'Bekabad',
         distance:11,
         status:'qualified',
@@ -42,7 +42,7 @@ export const score =[
     {
         id: 1012039100,
         title:'Samarkand Marathon',
-        date:'05/04/2016',
+        date:'11/04/2016',
         location:'Paxtachi',
         distance:17,
         status:'negotiation'

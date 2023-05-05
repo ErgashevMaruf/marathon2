@@ -1,4 +1,5 @@
 <p-table [value]="scores" [tableStyle]="{'max-width': '400px'}">
+    <!-- [selectAll]="false" -->
     <ng-template pTemplate="header">
         <tr>
             <th>
@@ -24,15 +25,7 @@
                 </p-columnFilter>
             </th>
             <th>
-                <p-columnFilter field="date" matchMode="equals" [showMenu]="false">
-                    <ng-template pTemplate="filter" let-value let-filter="filterCallback">
-                        <p-dropdown [ngModel]="value" [options]="scores" optionLabel="title" (onChange)="filter($event.value?.title===null ? $event.value :$event.value.title)" placeholder="Any" [showClear]="true">
-                            <ng-template let-option pTemplate="item">
-                                <p-tag [value]="option.title"></p-tag>
-                            </ng-template>
-                        </p-dropdown>
-                    </ng-template>
-                </p-columnFilter>
+                <p-columnFilter type="number" field="ID"></p-columnFilter>
             </th>
             <th>
                 <p-columnFilter field="location" matchMode="equals" [showMenu]="false">
@@ -51,7 +44,7 @@
         <tr>
             <td>{{1}}</td>
             <td>{{scores.title}}</td>
-            <td>{{scores.id}}</td>
+            <td><span class="font-bold">ID</span>:{{scores.id}}</td>
             <td>{{scores.location}}</td>
             <td>{{scores.date | date:'dd.MM.yyyy'}}</td>
             <td>{{scores.distance}}</td>
@@ -59,4 +52,3 @@
     </ng-template>
 </p-table>
 <!-- <p-dropdown [options]="score" [(ngModel)]="selectedCity" optionLabel="title"></p-dropdown> -->
-<input type="date" >
