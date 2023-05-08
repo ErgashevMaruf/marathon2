@@ -73,7 +73,14 @@ export const appRoutes: Route[] = [
             initialData: InitialDataResolver,
         },
         children: [
-            {path: 'example', loadChildren: () => import('app/modules/admin/example/example.module').then(m => m.ExampleModule)},
+            {path: 'example', loadChildren: () => import('app/modules/user/example/example.module').then(m => m.ExampleModule)},
+            {path: 'scores', loadChildren: () => import('app/modules/user/scores/scores.module').then(m => m.ScoresModule)},
+            {path: 'events', loadChildren: () => import('app/modules/user/events/events.module').then(m => m.EventsModule)},
+            {path: 'feedback', loadChildren: () => import('app/modules/user/feedback/feedback.module').then(m => m.feedbackModule)},
+            {path: 'pay', loadChildren: () => import('app/modules/user/pay/pay.module').then(m => m.PayModule)},
+            {path: 'settings', loadChildren: () => import('app/modules/user/settings/settings.module').then(m => m.settingsModule)},
+            {path: 'profile', loadChildren: () => import('app/modules/user/profile/profile.module').then(m => m.profileModule)},
+
         ]
     }
 ];

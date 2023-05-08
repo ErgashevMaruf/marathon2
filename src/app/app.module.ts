@@ -11,6 +11,7 @@ import { mockApiServices } from 'app/mock-api';
 import { LayoutModule } from 'app/layout/layout.module';
 import { AppComponent } from 'app/app.component';
 import { appRoutes } from 'app/app.routing';
+import { UserModule } from './modules/user/user.module';
 const routerConfig: ExtraOptions = {
     preloadingStrategy       : PreloadAllModules,
     scrollPositionRestoration: 'enabled'
@@ -35,6 +36,7 @@ const routerConfig: ExtraOptions = {
 
         // Layout module of your application
         LayoutModule,
+        UserModule
 
     ],
     bootstrap   : [

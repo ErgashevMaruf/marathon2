@@ -8,10 +8,13 @@ import { landingHomeRoutes } from 'app/modules/landing/home/home.routing';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DropdownModule } from 'primeng/dropdown';
 import { AnnouncementComponent } from './announcement/announcement.component';
+import { GalleriaModule } from 'primeng/galleria';
+import { GalleryComponent } from './gallery/gallery.component';
 @NgModule({
     declarations: [
         LandingHomeComponent,
-        AnnouncementComponent
+        AnnouncementComponent,
+        GalleryComponent
     ],
     imports     : [
         RouterModule.forChild(landingHomeRoutes),
@@ -19,7 +22,8 @@ import { AnnouncementComponent } from './announcement/announcement.component';
         MatIconModule,
         SharedModule,
         DropdownModule,
-        MatDialogModule
+        MatDialogModule,
+        GalleriaModule
     ]
 })
 export class LandingHomeModule

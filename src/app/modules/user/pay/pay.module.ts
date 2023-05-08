@@ -1,23 +1,23 @@
 import { NgModule } from '@angular/core';
 import { Route, RouterModule } from '@angular/router';
-import { ExampleComponent } from 'app/modules/admin/example/example.component';
 import { SharedModule } from 'app/shared/shared.module';
-const exampleRoutes: Route[] = [
+import { PayComponent } from './pay.component';
+const payRoutes: Route[] = [
     {
         path     : '',
-        component: ExampleComponent
-    }
+        component: PayComponent
+    },
 ];
 
 @NgModule({
     declarations: [
-        ExampleComponent
+        PayComponent
     ],
     imports     : [
-        RouterModule.forChild(exampleRoutes),
+        RouterModule.forChild(payRoutes),
         SharedModule
     ]
 })
-export class ExampleModule
+export class PayModule
 {
 }

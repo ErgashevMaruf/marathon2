@@ -481,7 +481,7 @@ fuse-vertical-navigation-group-item {
             color: currentColor;
 
             .fuse-vertical-navigation-item-icon {
-                @apply text-current opacity-60;
+                @apply text-green-700 opacity-60;
             }
 
             .fuse-vertical-navigation-item-title-wrapper {
@@ -515,7 +515,7 @@ fuse-vertical-navigation-collapsable-item {
                     @apply bg-gray-800 bg-opacity-5 dark:bg-white dark:bg-opacity-12;
 
                     .fuse-vertical-navigation-item-icon {
-                        @apply opacity-100;
+                        @apply text-white opacity-100;
                     }
 
                     .fuse-vertical-navigation-item-title {
@@ -535,7 +535,7 @@ fuse-vertical-navigation-collapsable-item {
                     @apply bg-gray-800 bg-opacity-5 dark:bg-white dark:bg-opacity-12;
 
                     .fuse-vertical-navigation-item-icon {
-                        @apply opacity-100;
+                        @apply text-white opacity-100;
                     }
 
                     .fuse-vertical-navigation-item-title,
