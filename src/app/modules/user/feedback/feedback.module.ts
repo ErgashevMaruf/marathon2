@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Route, RouterModule } from '@angular/router';
 import { FeedbackComponent } from './feedback.component';
 import { SharedModule } from 'app/shared/shared.module';
+import { DropdownModule } from 'primeng/dropdown';
 const feedbackRoutes: Route[] = [
     {
         path     : '',
@@ -15,7 +16,8 @@ const feedbackRoutes: Route[] = [
     ],
     imports     : [
         RouterModule.forChild(feedbackRoutes),
-        SharedModule
+        SharedModule,
+        DropdownModule
     ]
 })
 export class feedbackModule

@@ -519,7 +519,7 @@ fuse-vertical-navigation-collapsable-item {
                     }
 
                     .fuse-vertical-navigation-item-title {
-                        @apply opacity-100;
+                        @apply text-white opacity-100;
                     }
 
                     .fuse-vertical-navigation-item-subtitle {
@@ -535,7 +535,7 @@ fuse-vertical-navigation-collapsable-item {
                     @apply bg-gray-800 bg-opacity-5 dark:bg-white dark:bg-opacity-12;
 
                     .fuse-vertical-navigation-item-icon {
-                        @apply text-white opacity-100;
+                        @apply  opacity-100;
                     }
 
                     .fuse-vertical-navigation-item-title,

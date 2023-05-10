@@ -12,6 +12,8 @@ import { LayoutModule } from 'app/layout/layout.module';
 import { AppComponent } from 'app/app.component';
 import { appRoutes } from 'app/app.routing';
 import { UserModule } from './modules/user/user.module';
+import { HttpClientModule } from "@angular/common/http";
+import { MatIconModule } from '@angular/material/icon';
 const routerConfig: ExtraOptions = {
     preloadingStrategy       : PreloadAllModules,
     scrollPositionRestoration: 'enabled'
@@ -36,7 +38,9 @@ const routerConfig: ExtraOptions = {
 
         // Layout module of your application
         LayoutModule,
-        UserModule
+        UserModule,
+        HttpClientModule,
+        MatIconModule
 
     ],
     bootstrap   : [

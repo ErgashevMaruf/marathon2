@@ -1,0 +1,24 @@
+::ng-deep .p-dropdown{
+    border-raidus: none;
+    border:none;
+    border-bottom: 1px solid #707070
+}
+.p-dropdown .p-dropdown-trigger{
+    justify-content: start !important;
+    width: 10px;
+}
+.p-dropdown-label{
+    width: 80% !important;
+    display: flex !important;
+    flex: none !important;
+}
+.p-dropdown-trigger-icon{
+    font-size: 10px;
+    color: #02A3D3;
+    font-weight: 700 !important;
+}
+.p-inputtext{
+    color: #333333 !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+}

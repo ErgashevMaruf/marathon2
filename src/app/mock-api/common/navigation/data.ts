@@ -6,50 +6,57 @@ export const defaultNavigation: FuseNavigationItem[] = [
         id   : 'example',
         title: 'Example',
         type : 'basic',
-        icon : 'heroicons_outline:chart-pie',
+        icon : 'dashboardCustom',
         link : '/example'
     },
     {
         id   : 'profile',
         title: 'Profile',
         type : 'basic',
-        icon : 'heroicons_outline:chart-pie',
+        icon : 'accountCustom',
         link : '/profile'
     },
     {
         id   : 'events',
         title: 'Events',
         type : 'basic',
-        icon : 'heroicons_outline:chart-pie',
+        icon : 'eventsCustom',
         link : '/events'
     },
     {
         id   : 'score',
         title: 'Score',
         type : 'basic',
-        icon : 'heroicons_outline:chart-pie',
+        icon : 'scoreCustom',
         link : '/scores'
     },
     {
         id   : 'pay',
         title: 'Payment',
         type : 'basic',
-        icon : 'heroicons_outline:chart-pie',
+        icon : 'payCustom',
         link : '/pay'
     },
     {
         id   : 'feedback',
         title: 'Feedback',
         type : 'basic',
-        icon : 'heroicons_outline:chart-pie',
+        icon : 'messageCustom',
         link : '/feedback'
     },
     {
         id   : 'settings',
         title: 'Settings',
         type : 'basic',
-        icon : 'heroicons_outline:chart-pie',
+        icon : 'settingsCustom',
         link : '/settings'
+    },
+    {
+        id   : 'logout',
+        title: 'Logout',
+        type : 'basic',
+        icon : 'logoutCustom',
+        link : '/sign-out'
     }
 ];
 export const compactNavigation: FuseNavigationItem[] = [
