@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Events } from 'app/modules/services/events/event.type';
 import { EventsService } from 'app/modules/services/events/events.service';
 
@@ -8,6 +8,8 @@ import { EventsService } from 'app/modules/services/events/events.service';
   styleUrls: ['./carusel.component.css']
 })
 export class CaruselComponent implements OnInit {
+
+    @Input() numVisible = 4;
 
     events: Events[];
 

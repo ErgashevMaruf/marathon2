@@ -1,6 +1,6 @@
 
 <div class="card">
-    <p-carousel [value]="events" [numVisible]="4" [numScroll]="3" [circular]="true" [responsiveOptions]="responsiveOptions" autoPlayInterval="3000">
+    <p-carousel [value]="events" [numVisible]="numVisible" [numScroll]="3" [circular]="true" [responsiveOptions]="responsiveOptions" autoPlayInterval="3000">
         <ng-template let-events pTemplate="item">
             <!-- <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
                 <div class="mb-3">
@@ -26,7 +26,7 @@
                 <p class="font-bold">Participants:<span class="font-normal">{{events.participants}}</span></p>
                 <p class="font-bold">Location:<span class="font-normal">{{events.participants}}</span></p>
                 <p class="mt-0 mb-3 font-bold">Cost:<span class="font-normal">{{ '$' + events.cost }}</span></p>
-                    <button (click)="onclickJoin(events.id)" class="rounded-[14px] btn bg-[#01A559] text-white font-bold mr-[25px]" >Join Us</button>
+                    <button (click)="onclickJoin(events.id)" class="rounded-[14px] btn bg-[#01A559] text-white font-bold mr-[25px]">Join Us</button>
                 </div>
             </div>
         </ng-template>
