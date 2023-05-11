@@ -10,6 +10,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { AnnouncementComponent } from './announcement/announcement.component';
 import { GalleriaModule } from 'primeng/galleria';
 import { GalleryComponent } from './gallery/gallery.component';
+import { ScrollTopModule } from 'primeng/scrolltop';
 @NgModule({
     declarations: [
         LandingHomeComponent,
@@ -23,7 +24,8 @@ import { GalleryComponent } from './gallery/gallery.component';
         SharedModule,
         DropdownModule,
         MatDialogModule,
-        GalleriaModule
+        GalleriaModule,
+        ScrollTopModule
     ]
 })
 export class LandingHomeModule

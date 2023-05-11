@@ -2,10 +2,10 @@
     <p class="mt-[50px] text-[35px] font-bold mb-[30px]">
         Feedback
     </p>
-    <div class="flex justify-center">
+    <div class="flex justify-between pb-[50px]">
         <div class="left__side w-full max-w-[900px]">
             <div class="w-full">
-                <div class="flex h-[64px] bg-[#01A559] items-center px-[20px] rounded-t-[20px]">
+                <div class="flex h-[64px] bg-[#01A559] items-center px-[20px] rounded-t-[20px] gap-[10px]">
                     <svg xmlns="http://www.w3.org/2000/svg" width="26.536" height="25.867" viewBox="0 0 26.536 25.867">
                         <g id="Сгруппировать_14760" data-name="Сгруппировать 14760" transform="translate(0.5 0.498)">
                           <g id="Сгруппировать_14759" data-name="Сгруппировать 14759">
@@ -39,13 +39,40 @@
                             </g>
                           </svg>
                     </div>
-                    <button class="absolute right-[10px]">Click</button>
+                    <button class="absolute text-white rounded-[10px] right-[10px] bottom-[35px] bg-[#01A559] py-[10px] px-[40px]">Send</button>
+                </div>
+            </div>
+            <div class="mt-[50px] h-[400px]">
+                <app-message></app-message>
+            </div>
+            <div class="max-w-[900px] h-[440px] bg-[#F5F5F5] rounded-[20px] p-[20px]">
+                <p class="text-[25px] font-bold mb-[20px]">Most Popular</p>
+                <div class="rounded-[20px] grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 gap-6 w-full min-w-0">
+                    <div class="bg-white rounded-[20px] flex">
+                        <img src="./assets/images/Events/img.jpg" alt="" class="popularImg object-cover">
+                        <p class="text-[22px] font-semibold self-center ml-[50px] text-[#01A559] ">Several Aral</p>
+                    </div>
+                    <div class="bg-white rounded-[20px] flex">
+                        <img src="./assets/images/Events/img.jpg" alt="" class="popularImg object-cover">
+                        <p class="text-[22px] font-semibold self-center ml-[50px] text-[#01A559]">Yangi Nafas</p>
+                    </div>
+                    <div class="bg-white rounded-[20px] flex">
+                        <img src="./assets/images/Events/img.jpg" alt="" class="popularImg object-cover">
+                        <p class="text-[22px] font-semibold self-center ml-[50px] text-[#01A559]">Tashkent Marafon</p>
+                    </div>
+                    <div class="bg-white rounded-[20px] flex">
+                        <img src="./assets/images/Events/img.jpg" alt="" class="popularImg object-cover">
+                        <p class="text-[22px] font-semibold self-center ml-[50px] text-[#01A559]">Tashkent Marafon</p>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="right__side">
-            <div class="w-[400px]">
+            <div class="max-w-[400px] mb-[40px]">
                 <app-carusel [numVisible]="1"></app-carusel>
+            </div>
+            <div>
+                <app-eventsInfo></app-eventsInfo>
             </div>
         </div>
     </div>

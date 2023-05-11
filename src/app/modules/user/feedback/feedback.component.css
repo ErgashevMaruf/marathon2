@@ -1,7 +1,7 @@
 ::ng-deep .p-dropdown {
     border-raidus: none;
     border: none;
-    border-bottom: 1px solid #707070;
+    border-bottom: 1px solid #01A559;
 }
 .p-dropdown .p-dropdown-trigger {
     justify-content: start !important;
@@ -14,7 +14,7 @@
 }
 .p-dropdown-trigger-icon {
     font-size: 10px;
-    color: #02a3d3;
+    color: #01A559;
     font-weight: 700 !important;
 }
 .p-inputtext {
@@ -24,13 +24,9 @@
 }
 :host ::ng-deep .pi-chevron-right:before {
     display: none !important;
-    color: #01a559 !important;
-    font-size: 30px !important;
 }
 :host ::ng-deep .pi-chevron-left:before {
     display: none;
-    color: #01a559 !important;
-    font-size: 30px !important;
 }
 .upload_container {
     max-width: 500px;
@@ -51,4 +47,9 @@ input[type="text"] {
     box-sizing: border-box;
     border: none;
     border-bottom: 1px solid #01a559;
+}
+.popularImg{
+    width: 140px;
+    height:140px;
+    border-radius: 20px;
 }

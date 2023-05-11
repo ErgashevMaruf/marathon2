@@ -4,6 +4,9 @@ import { FeedbackComponent } from './feedback.component';
 import { SharedModule } from 'app/shared/shared.module';
 import { DropdownModule } from 'primeng/dropdown';
 import { FileUploadModule } from 'primeng/fileupload';
+import { TableModule } from 'primeng/table';
+import { MessageComponent } from './message/message.component';
+import { EventsInfoComponent } from './eventsInfo/eventsInfo.component';
 const feedbackRoutes: Route[] = [
     {
         path: '',
@@ -13,13 +16,16 @@ const feedbackRoutes: Route[] = [
 
 @NgModule({
     declarations: [
-        FeedbackComponent
+        FeedbackComponent,
+        MessageComponent,
+        EventsInfoComponent
     ],
     imports: [
         RouterModule.forChild(feedbackRoutes),
         SharedModule,
         DropdownModule,
-        FileUploadModule
+        FileUploadModule,
+        TableModule
     ]
 })
 export class feedbackModule {

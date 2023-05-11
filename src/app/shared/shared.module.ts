@@ -9,6 +9,7 @@ import { TableModule } from 'primeng/table';
 import { ScoreComponent } from './score/score.component';
 import { DropdownModule } from 'primeng/dropdown';
 import { TagModule } from 'primeng/tag';
+import { ScrollTopModule } from 'primeng/scrolltop';
 @NgModule({
     declarations:[
         CaruselComponent,
@@ -23,7 +24,8 @@ import { TagModule } from 'primeng/tag';
         MatIconModule,
         TableModule,
         DropdownModule,
-        TagModule
+        TagModule,
+        ScrollTopModule
     ],
     exports: [
         CommonModule,
