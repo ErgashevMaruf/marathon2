@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-interface sendOption{
-    name:string,
-    value:string
+interface sendOption {
+  name: string,
+  value: string
 }
 @Component({
   selector: 'app-feedback',
@@ -11,14 +11,14 @@ interface sendOption{
 })
 export class FeedbackComponent implements OnInit {
 
-    sendOption:sendOption[];
-    selectOption:sendOption
+  sendOption: sendOption[];
+  selectOption: sendOption
   constructor() { }
 
   ngOnInit() {
     this.sendOption = [
-        { name: 'Telegram', value: 'NY' },
-        { name: 'Sms', value: 'RM' },
+      { name: 'Telegram', value: 'NY' },
+      { name: 'Sms', value: 'RM' },
     ];
   }
 
