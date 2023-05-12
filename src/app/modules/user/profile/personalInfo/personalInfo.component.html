@@ -1,4 +1,4 @@
-<div class="w-full max-w-[900px] h-[440px] rounded-[20px] flex bg-white">
+<div class="w-full max-w-[900px]  h-[440px] rounded-[20px] flex bg-white mb-[30px]">
     <div class="bg-[#01A559] w-full h-full max-w-[230px] flex flex-col justify-center items-center rounded-[20px]">
             <div class="w-[170px] h-[215px] bg-white flex justify-center items-center relative mb-[10px] rounded-[20px]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="69.238" height="63.36" viewBox="0 0 69.238 63.36">
@@ -17,7 +17,7 @@
     <div class="w-full bg-white px-[30px] rounded-[20px]">
         <div class="flex justify-between w-full max-w-[660px] mt-[30px]">
                 <p class="text-[30px] font-bold text-[#01A559]">Shaxsiy ma'lumotlar</p>
-                <div class="flex">
+                <!-- <div class="flex">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24.14" height="24.137" viewBox="0 0 24.14 24.137">
                         <g id="Сгруппировать_14526" data-name="Сгруппировать 14526" transform="translate(0.75 0.75)">
                           <path id="Контур_16493" data-name="Контур 16493" d="M998.375,144.5H990.5a2.25,2.25,0,0,0-2.25,2.25V162.5a2.25,2.25,0,0,0,2.25,2.25h15.75a2.252,2.252,0,0,0,2.25-2.25v-7.875" transform="translate(-988.25 -142.113)" fill="none" stroke="#01a559" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
@@ -27,7 +27,29 @@
                         </g>
                       </svg>
                       <p class="text-[#01A559]">Edit</p>
-                </div>
+                </div> -->
+        </div>
+        <div>
+            <input type="text" class="text-green-600" placeholder="F.I.SH" value="Ergashev Maruf" disabled>
+            <div class="flex gap-[20px] max-[780px]:block">
+                <input type="number" placeholder="Tel.Raqam">
+                <input type="number" placeholder="PINFL" disabled>
+            </div>
+            <div class="flex gap-[20px] max-[780px]:block">
+                <input type="text" placeholder="Davlat">
+                <input type="text" placeholder="Viloyat">
+            </div>
+            <div class="flex gap-[20px] max-[780px]:block">
+                <input type="text" placeholder="Jinsi">
+                <input type="text" placeholder="Tug'ilgan sana">
+            </div>
+            <div class="flex gap-[20px] max-[780px]:block">
+                <p-password   [(ngModel)]="value" [toggleMask]="true" placeholder="Parolni kiriting"></p-password>
+                <p-password  [(ngModel)]="checkValue" [toggleMask]="true" placeholder="Parolni tasdiqlash"></p-password>
+            </div>
         </div>
     </div>
+</div>
+<div class="w-full max-w-[900px] flex justify-end">
+    <button class="py-[15px] px-[30px] bg-[#01A559] rounded-[10px] text-white text-[18px] font-semibold">Yuborish</button>
 </div>

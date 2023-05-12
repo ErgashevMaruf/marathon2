@@ -1,7 +1,12 @@
-::ng-deep .p-dropdown {
-    border-raidus: none;
+:host ::ng-deep .p-dropdown {
     border: none;
     border-bottom: 1px solid #01A559;
+}
+:host ::ng-deep .p-component{
+    border-radius: 0 !important;
+}
+:host ::ng-deep .pi-chevron-down:before{
+    color:green !important
 }
 .p-dropdown .p-dropdown-trigger {
     justify-content: start !important;
@@ -14,7 +19,7 @@
 }
 .p-dropdown-trigger-icon {
     font-size: 10px;
-    color: #01A559;
+    color: #01A559 !important;
     font-weight: 700 !important;
 }
 .p-inputtext {
@@ -46,10 +51,20 @@ input[type="text"] {
     margin: 8px 0;
     box-sizing: border-box;
     border: none;
-    border-bottom: 1px solid #01a559;
+
 }
 .popularImg{
     width: 140px;
     height:140px;
     border-radius: 20px;
+}
+:host ::ng-deep .p-focus{
+    border: none !important;
+    box-shadow:none !important;
+}
+:host ::ng-deep .p-inputwrapper-focus{
+    border: none !important;
+    box-shadow:none !important;
+    border-bottom: 1px solid #01a559 !important;
+
 }

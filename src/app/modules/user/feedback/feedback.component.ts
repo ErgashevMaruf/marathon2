@@ -16,6 +16,7 @@ export class FeedbackComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
     this.sendOption = [
       { name: 'Telegram', value: 'NY' },
       { name: 'Sms', value: 'RM' },
