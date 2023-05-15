@@ -1,8 +1,25 @@
-<div>
-    <h4>Klublar</h4>
-    <div class="card flex justify-content-center">
-        <form [formGroup]="formGroup">
-            <p-dropdown [options]="cities" optionLabel="name"></p-dropdown>
-        </form>
+<div class="w-full max-w-[900px] h-[277px] rounded-[20px] bg-white py-[36px] px-[55px]">
+    <h4 class="club text-[22px] font-bold">Klublar</h4>
+    <div class="flex justify-between items-center mb-10">
+        <div class="card flex justify-content-center">
+            <form [formGroup]="formGroup">
+                <p-dropdown [options]="cities" optionLabel="name"></p-dropdown>
+            </form>
+        </div>
+        <div class="flex gap-[50px]">
+            <div class="flex">
+                
+            <input type="radio" class="w-6 h-6">
+            <p class="ml-2 font-semibold text-[18px] text-[#02A3D3]">Qo'shilish</p>
+            </div>
+            <div class="flex">
+                
+            <input type="radio" class="w-6 h-6">
+            <p class="ml-2 font-semibold text-[18px] text-[#02A3D3]">Chiqip ketish</p>
+            </div>
+        </div>
+    </div>
+    <div class="w-full max-w-[900px] flex justify-end">
+        <button class="py-[10px] px-[30px] bg-[#02A3D3] rounded-[10px] text-white text-[18px] font-semibold">Tasdiqlash</button>
     </div>
 </div>

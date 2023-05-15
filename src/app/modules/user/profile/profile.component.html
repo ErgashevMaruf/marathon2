@@ -1,9 +1,16 @@
-<div class="w-full max-w-screen-xl mx-auto pb-[50px]">
-    <div class="flex justify-between my-[40px]">
-        <p class="text-[30px] font-bold">Hello, <span class="text-[#01A559]">Aziza!</span></p>
-        <p class="text-[30px] font-bold">ID: <span class="text-[#01A559]">12345</span></p>
+<div class="w-full max-w-screen-xl mx-auto py-[50px] flex justify-center">
+    <div>
+        <div class="flex justify-between mb-[40px]">
+            <p class="text-[30px] font-bold">Hello, <span class="text-[#01A559]">Aziza!</span></p>
+            <p class="text-[30px] font-bold">ID: <span class="text-[#01A559]">12345</span></p>
+        </div>
+        <div class="mb-6">
+            <app-personalInfo></app-personalInfo>
+        </div>
+        <app-club></app-club>
     </div>
-    <app-personalInfo></app-personalInfo>
-    <app-club></app-club>
+    <div class="max-w-[450px]">
+        <app-carusel [numVisible]="1"></app-carusel>
+    </div>
 </div>
 

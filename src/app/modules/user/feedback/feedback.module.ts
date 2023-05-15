@@ -6,7 +6,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { FileUploadModule } from 'primeng/fileupload';
 import { TableModule } from 'primeng/table';
 import { MessageComponent } from './message/message.component';
-import { EventsInfoComponent } from './eventsInfo/eventsInfo.component';
+import { EventsInfoComponent } from '../../../shared/eventsInfo/eventsInfo.component';
 const feedbackRoutes: Route[] = [
     {
         path: '',
