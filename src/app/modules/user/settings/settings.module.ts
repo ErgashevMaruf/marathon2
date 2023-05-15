@@ -3,6 +3,8 @@ import { Route, RouterModule } from '@angular/router';
 import { SharedModule } from 'app/shared/shared.module';
 import { SettingsComponent } from './settings.component';
 import { DropdownModule } from 'primeng/dropdown';
+import { RadioButtonModule } from 'primeng/radiobutton';
+
 const settingsRoutes: Route[] = [
     {
         path: '',
@@ -17,7 +19,8 @@ const settingsRoutes: Route[] = [
     imports: [
         RouterModule.forChild(settingsRoutes),
         SharedModule,
-        DropdownModule
+        DropdownModule,
+        RadioButtonModule
     ]
 })
 export class settingsModule {

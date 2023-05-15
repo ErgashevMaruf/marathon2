@@ -1,7 +1,7 @@
 export const allEvents =[
     {
         image:'img.jpg' ,
-        id: '1000',
+        id: '1002',
         title:'Tashkent Marathon',
         date:'18.11.2022',
         participants: 122,
@@ -10,7 +10,7 @@ export const allEvents =[
     },
     {
         image:'img.jpg' ,
-        id: '1000',
+        id: '1003',
         title:'Tashkent Marathon',
         date:'18.11.2022',
         participants: 122,
@@ -19,7 +19,7 @@ export const allEvents =[
     },
     {
         image:'img.jpg' ,
-        id: '1000',
+        id: '1009',
         title:'Tashkent Marathon',
         date:'18.11.2022',
         participants: 122,
@@ -28,7 +28,7 @@ export const allEvents =[
     },
     {
         image:'img.jpg' ,
-        id: '1000',
+        id: '1010',
         title:'Tashkent Marathon',
         date:'18.11.2022',
         participants: 122,

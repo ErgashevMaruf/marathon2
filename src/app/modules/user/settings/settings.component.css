@@ -49,3 +49,15 @@ input[type="text"] {
     padding-left: 0;
     width: 210px;
 }
+:host ::ng-deep .p-radiobutton .p-radiobutton-box.p-highlight:not(.p-disabled):hover{
+    background: #01a559 !important;
+    box-shadow: none;
+}
+:host ::ng-deep .p-radiobutton .p-radiobutton-box.p-highlight {
+    border-color: #01a559;
+    background: #01a559;
+    box-shadow: none;
+}
+:host ::ng-deep .p-radiobutton .p-radiobutton-box:hover {
+    border-color: green !important;
+}

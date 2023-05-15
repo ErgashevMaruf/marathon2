@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Route, RouterModule } from '@angular/router';
 import { SharedModule } from 'app/shared/shared.module';
 import { PayComponent } from './pay.component';
+import { NgApexchartsModule } from 'ng-apexcharts';
 const payRoutes: Route[] = [
     {
         path     : '',
@@ -15,7 +16,8 @@ const payRoutes: Route[] = [
     ],
     imports     : [
         RouterModule.forChild(payRoutes),
-        SharedModule
+        SharedModule,
+        NgApexchartsModule
     ]
 })
 export class PayModule
