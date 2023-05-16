@@ -1,5 +1,9 @@
-<!-- <p-galleria [(value)]="images" [showIndicators]="true" [showThumbnails]="false" [responsiveOptions]="responsiveOptions" [containerStyle]="{ 'max-width': '640px' }">
+<p-galleria [(value)]="images" [showIndicators]="true" [showThumbnails]="false" [changeItemOnIndicatorHover]="true" [responsiveOptions]="responsiveOptions" [containerStyle]=""> 
     <ng-template pTemplate="item" let-item>
-        <img [src]="item.itemImageSrc" style="width: 100%; display: block;" />
+            <div class="wrapper">
+                <div *ngFor="let imgs of item">
+                    <img src="assets/yugur/{{imgs}}">
+                </div>
+            </div>
     </ng-template>
-</p-galleria> -->
+</p-galleria>

@@ -2,47 +2,47 @@
     <!-- [selectAll]="false" -->
     <ng-template pTemplate="header">
         <tr>
-            <th>
-                <p-columnFilter field="title" matchMode="equals" [showMenu]="false">
-                    <ng-template pTemplate="filter" let-value let-filter="filterCallback">
-                        <p-dropdown [ngModel]="value" [options]="scores" optionLabel="title" (onChange)="filter($event.value?.title===null ? $event.value :$event.value.title)" placeholder="Any" [showClear]="true">
-                            <ng-template let-option pTemplate="item">
-                                <p-tag [value]="option.title"></p-tag>
-                            </ng-template>
-                        </p-dropdown>
-                    </ng-template>
-                </p-columnFilter>
-            </th>
-            <th>
-                <p-columnFilter field="date" matchMode="contains" [showMenu]="false">
-                    <ng-template pTemplate="filter" let-value let-filter="filterCallback">
-                        <p-dropdown [ngModel]="value" [options]="scores" optionLabel="date" (onChange)="filter($event.value?.date.getFullYear()==null ? $event.value : $event.value.date.getFullYear())" placeholder="Any" [showClear]="true">
-                            <ng-template let-option pTemplate="item">
-                                <p-tag [value]="option.date.getFullYear()"></p-tag>
-                            </ng-template>
-                        </p-dropdown>
-                    </ng-template>
-                </p-columnFilter>
-            </th>
-            <th>
-                <p-columnFilter type="number" field="ID"></p-columnFilter>
-            </th>
-            <th>
-                <p-columnFilter field="location" matchMode="equals" [showMenu]="false">
-                    <ng-template pTemplate="filter" let-value let-filter="filterCallback">
-                        <p-dropdown [ngModel]="value" [options]="scores" optionLabel="title" (onChange)="filter($event.value?.location==null ? $event.value :$event.value.location)" placeholder="Any" [showClear]="true">
-                            <ng-template let-option pTemplate="item">
-                                <p-tag [value]="option.location"></p-tag>
-                            </ng-template>
-                        </p-dropdown>
-                    </ng-template>
-                </p-columnFilter>
-            </th>
-        </tr>
+            <th class="flex">
+            <mat-form-field
+                    >
+                        <input
+                            matInput
+                            type="text"
+                            (input)="
+                                dt.filter(
+                                    $event.target.value,
+                                    col.field,
+                                    col.filterMatchMode
+                                )
+                            "
+                            placeholder=""
+                       class="bg-red-500" />
+                    </mat-form-field>
+                    <mat-form-field
+                    >
+                        <input
+                            matInput
+                            type="text"
+                            (input)="
+                                dt.filter(
+                                    $event.target.value,
+                                    col.field,
+                                    col.filterMatchMode
+                                )
+                            "
+                            placeholder=""
+                       class="bg-red-500" />
+                    </mat-form-field>
+                    <p-dropdown [options]="sendOption" [(ngModel)]="selectOption" optionLabel="name">
+                    </p-dropdown>
+                    <p-dropdown [options]="sendOption" [(ngModel)]="selectOption" optionLabel="name">
+                    </p-dropdown>
+                </th>
+            </tr>
     </ng-template>
-    <ng-template pTemplate="body" let-scores>
+    <ng-template pTemplate="body" let-scores let-rowIndex="rowIndex">
         <tr>
-            <td>{{1}}</td>
+            <td>{{rowIndex+1}}</td>
             <td>{{scores.title}}</td>
             <td><span class="font-bold">ID</span>:{{scores.id}}</td>
             <td>{{scores.location}}</td>

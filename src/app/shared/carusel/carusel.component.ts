@@ -3,9 +3,9 @@ import { Events } from 'app/modules/services/events/event.type';
 import { EventsService } from 'app/modules/services/events/events.service';
 
 @Component({
-  selector: 'app-carusel',
-  templateUrl: './carusel.component.html',
-  styleUrls: ['./carusel.component.css']
+    selector: 'app-carusel',
+    templateUrl: './carusel.component.html',
+    styleUrls: ['./carusel.component.css']
 })
 export class CaruselComponent implements OnInit {
 
@@ -15,14 +15,16 @@ export class CaruselComponent implements OnInit {
 
     responsiveOptions: any[];
 
-    constructor(private eventService: EventsService) {}
+    constructor(private eventService: EventsService) { }
 
     ngOnInit() {
-        this.eventService.getCategories().subscribe(res=>{
-            this.events =res;
+        this.eventService.getCategories().subscribe(res => {
+            this.events = res;
+            console.log(res);
+
         })
 
-       this.responsiveOptions = [
+        this.responsiveOptions = [
             {
                 breakpoint: '1199px',
                 numVisible: 3,

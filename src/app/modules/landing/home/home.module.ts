@@ -11,11 +11,13 @@ import { AnnouncementComponent } from './announcement/announcement.component';
 import { GalleriaModule } from 'primeng/galleria';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ScrollTopModule } from 'primeng/scrolltop';
+import { PartnersComponent } from './partners/partners.component';
 @NgModule({
     declarations: [
         LandingHomeComponent,
         AnnouncementComponent,
-        GalleryComponent
+        GalleryComponent,
+        PartnersComponent
     ],
     imports     : [
         RouterModule.forChild(landingHomeRoutes),

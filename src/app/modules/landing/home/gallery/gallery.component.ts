@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { GalleryService } from './gallery.service';
 
 @Component({
-  selector: 'app-gallery',
-  templateUrl: './gallery.component.html',
-  styleUrls: ['./gallery.component.css']
+    selector: 'app-gallery',
+    templateUrl: './gallery.component.html',
+    styleUrls: ['./gallery.component.css']
 })
 export class GalleryComponent implements OnInit {
 
@@ -24,12 +25,14 @@ export class GalleryComponent implements OnInit {
         }
     ];
 
-    // constructor(private photoService: PhotoService) {}
+    constructor(private gallery: GalleryService) { }
 
     ngOnInit() {
-        // this.photoService.getImages().then((images) => {
-        //     this.images = images;
-        // });
+        this.gallery.getCategories().subscribe(res => {
+            this.images = res;
+            console.log(res);
+
+        })
     }
 
 }

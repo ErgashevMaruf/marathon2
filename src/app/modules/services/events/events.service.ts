@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable,tap,} from 'rxjs';
+import { BehaviorSubject, Observable, tap, } from 'rxjs';
 import { Events } from './event.type';
 import { HttpClient } from '@angular/common/http';
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class EventsService {
 
@@ -12,12 +12,10 @@ export class EventsService {
 
     constructor(private _httpClient: HttpClient) { }
 
-    get events$(): Observable<Events[]>
-    {
+    get events$(): Observable<Events[]> {
         return this._events.asObservable();
     }
-    getCategories(): Observable<Events[]>
-    {
+    getCategories(): Observable<Events[]> {
         return this._httpClient.get<Events[]>('api/events/allEvents').pipe(
             tap((response: any) => {
                 this._events.next(response);

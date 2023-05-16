@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import { cloneDeep } from 'lodash-es';
 import { FuseMockApiService } from '@fuse/lib/mock-api/mock-api.service';
-import { allEvents } from 'app/mock-api/events/data';
+import { gallery } from 'app/mock-api/gallery/data';
 
 @Injectable({
     providedIn: 'root'
 })
 
-export class EventsMockApi {
-    private _allevents: any[] = allEvents;
+export class galleryMockApi {
+    private _imgs: any[] = gallery;
     /**
      * Constructor
      */
@@ -29,16 +29,16 @@ export class EventsMockApi {
         // @ Categories - GET
         // -----------------------------------------------------------------------------------------------------
         this._fuseMockApiService
-            .onGet('api/events/allEvents')
+            .onGet('api/gallery/gallery')
             .reply(() => {
 
                 // Clone the categories
-                const categories = cloneDeep(this._allevents);
+                const imgs = cloneDeep(this._imgs);
 
                 // Sort the categories alphabetically by title
                 // categories.sort((a, b) => a.title.localeCompare(b.title));
 
-                return [200, categories];
+                return [200, imgs];
             });
     }
 }
