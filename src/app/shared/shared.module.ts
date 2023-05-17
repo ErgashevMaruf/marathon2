@@ -10,11 +10,14 @@ import { ScoreComponent } from './score/score.component';
 import { DropdownModule } from 'primeng/dropdown';
 import { TagModule } from 'primeng/tag';
 import { ScrollTopModule } from 'primeng/scrolltop';
+import { NgApexchartsModule } from 'ng-apexcharts';
+import { DiagrammComponent } from './diagramm/diagramm.component';
 @NgModule({
     declarations:[
         CaruselComponent,
         FooterComponent,
-        ScoreComponent
+        ScoreComponent,
+        DiagrammComponent
     ],
     imports: [
         CommonModule,
@@ -25,7 +28,8 @@ import { ScrollTopModule } from 'primeng/scrolltop';
         TableModule,
         DropdownModule,
         TagModule,
-        ScrollTopModule
+        ScrollTopModule,
+        NgApexchartsModule
     ],
     exports: [
         CommonModule,
@@ -33,7 +37,8 @@ import { ScrollTopModule } from 'primeng/scrolltop';
         ReactiveFormsModule,
         CaruselComponent,
         FooterComponent,
-        ScoreComponent
+        ScoreComponent,
+        DiagrammComponent
     ]
 })
 export class SharedModule
