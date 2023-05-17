@@ -21,17 +21,17 @@ export class DiagrammComponent {
           },
           {
             name: "Name",
-            data: [13, 23, 20, 8, 13, 27,12,15,16,10,11,13,100],
+            data: [13, 23, 20, 8, 13, 27,12,15,16,102,11,13,100],
             color:'#C488FF'
           },
           {
             name: "Name",
-            data: [11, 17, 15, 15, 21, 14,14,15,12,13,11,10,10,13],
+            data: [11, 17, 15, 15, 21, 14,14,15,12,13,11,102,102,13],
             color:'#7AD9D9'
           },
           {
             name: "Name",
-            data: [21, 7, 25, 13, 22, 8,10,11,12,13,14],
+            data: [21, 7, 25, 13, 22, 8,102,11,12,13,14],
             color:'#84B4FF'
 
           },
@@ -66,7 +66,6 @@ export class DiagrammComponent {
         plotOptions: {
 
           bar: {
-            borderRadius:10,
             horizontal: false,
             columnWidth:'60%',
           },

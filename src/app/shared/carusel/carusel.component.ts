@@ -9,7 +9,7 @@ import { EventsService } from 'app/modules/services/events/events.service';
 })
 export class CaruselComponent implements OnInit {
 
-    @Input() numVisible = 4;
+    @Input() numVisible = 3;
 
     events: Events[];
 
