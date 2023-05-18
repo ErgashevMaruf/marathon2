@@ -16,11 +16,12 @@ interface City {
 export class ScoreComponent implements OnInit {
 
     scores: Score[];
-
+    city: any[];
+    selectCity:any
     cols:any[];
-
+    selectYear:any[];
     year: any[];
-
+    selectOption: any[]
     loading: boolean = true;
 
     activityValues: number[] = [0, 100];
@@ -34,24 +35,28 @@ export class ScoreComponent implements OnInit {
                     this.scores.forEach((customer) => (customer.date = new Date(customer.date)));
                     console.log(this.scores[1].date.getMonth());
 
-
-     this.year = [
-                    { label: 'Yanvar', value: '10' },
-                    { label: 'Fevral', value: '10' },
-                    { label: 'Mart', value: '10' },
-                    { label: 'Aprel', value: '10' },
-                    { label: 'May', value: '10' },
-                    { label: 'Iyun', value: '10' },
-                    { label: 'Iyul', value: '10' },
-                    { label: 'Avgust', value: '10' },
-                    { label: 'Sentabr', value: '10' },
-                    { label: 'Oktabr', value: '10' },
-                    { label: 'Noyabr', value: '10' },
-                    { label: 'Dekabr', value: '10' },
-                ];
-
     });
-
+    this.year = [
+        { label: 'Yanvar', value: '10' },
+        { label: 'Fevral', value: '10' },
+        { label: 'Mart', value: '10' },
+        { label: 'Aprel', value: '10' },
+        { label: 'May', value: '10' },
+        { label: 'Iyun', value: '10' },
+        { label: 'Iyul', value: '10' },
+        { label: 'Avgust', value: '10' },
+        { label: 'Sentabr', value: '10' },
+        { label: 'Oktabr', value: '10' },
+        { label: 'Noyabr', value: '10' },
+        { label: 'Dekabr', value: '10' },
+    ];
+    this.city = [
+        { label: 'Toshkent', value: '10' },
+        { label: 'Samarqand', value: '10' },
+        { label: 'Buxoro', value: '10' },
+        { label: 'Qashqadaryo', value: '10' },
+        { label: 'Namangan', value: '10' },
+    ];
   }
   find(event:any)
   {

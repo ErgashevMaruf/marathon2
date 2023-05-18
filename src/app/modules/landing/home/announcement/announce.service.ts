@@ -3,7 +3,8 @@ import { BehaviorSubject,Observable,tap,switchMap } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 export interface announce {
-    title: string,
+    title: string
+    text: string,
     date: Date,
   }
 

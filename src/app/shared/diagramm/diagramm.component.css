@@ -1,0 +1,17 @@
+:host ::ng-deep .apexcharts-xaxis-tick
+{
+    display:none !important;
+}
+:host ::ng-deep .apexcharts-toolbar{
+    display:none;
+
+}
+:host ::ng-deep .p-dropdown{
+    border: 1px solid #01A559 !important;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333333;
+}
+:host ::ng-deep .pi-chevron-down:before{
+    color: #01A559;
+}

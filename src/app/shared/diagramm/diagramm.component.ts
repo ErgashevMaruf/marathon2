@@ -10,12 +10,20 @@ export class DiagrammComponent {
 
     @ViewChild("chart") chart;
     public chartOptions: ApexOptions;
-
+    selectOption: any;
+    sendOption= [
+        {
+            name: "Test1", value:'10',
+        },
+        {
+            name: 'Test2', value:'10'
+        }
+    ]
     constructor() {
       this.chartOptions = {
         series: [
           {
-            name: "Name",
+            name: "18Yosh",
             data: [300,200,100, 55, 41, 67, 22, 43,12,13,17,18,15,16],
             color:'#02A3D3',
           },
@@ -46,9 +54,6 @@ export class DiagrammComponent {
           zoom: {
             enabled: true
           },
-
-        },
-        dataLabels:{
 
         },
         responsive: [
@@ -89,12 +94,10 @@ export class DiagrammComponent {
             "Nam"
 
           ],
-          range:10,
         },
-        yaxis:{
-
+        dataLabels:{
+            enabled:false
         },
-
         legend: {
           position: "right",
           offsetY: 40,

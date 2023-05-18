@@ -1,12 +1,26 @@
-<div id="chart">
-    <apx-chart
-      [series]="chartOptions.series"
-      [chart]="chartOptions.chart"
-      [dataLabels]="chartOptions.dataLabels"
-      [plotOptions]="chartOptions.plotOptions"
-      [responsive]="chartOptions.responsive"
-      [xaxis]="chartOptions.xaxis"
-      [legend]="chartOptions.legend"
-      [fill]="chartOptions.fill"
-    ></apx-chart>
-  </div>
+<div>
+    <div class="flex justify-between mb-[20px]">
+        <p-dropdown [options]="sendOption" [(ngModel)]="selectOption" optionLabel="name">
+        </p-dropdown>
+        <p-dropdown [options]="sendOption" [(ngModel)]="selectOption" optionLabel="name">
+        </p-dropdown>
+        <p-dropdown [options]="sendOption" [(ngModel)]="selectOption" optionLabel="name">
+        </p-dropdown>
+        <p-dropdown [options]="sendOption" [(ngModel)]="selectOption" optionLabel="name">
+        </p-dropdown>
+        <p-dropdown [options]="sendOption" [(ngModel)]="selectOption" optionLabel="name">
+        </p-dropdown>
+    </div>
+    <div id="chart" class="bg-white rounded-[20px] shadow-xl">
+        <apx-chart
+          [series]="chartOptions.series"
+          [chart]="chartOptions.chart"
+          [dataLabels]="chartOptions.dataLabels"
+          [plotOptions]="chartOptions.plotOptions"
+          [responsive]="chartOptions.responsive"
+          [xaxis]="chartOptions.xaxis"
+          [legend]="chartOptions.legend"
+          [fill]="chartOptions.fill"
+        ></apx-chart>
+      </div>
+</div>

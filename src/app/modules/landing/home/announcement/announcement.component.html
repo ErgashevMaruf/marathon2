@@ -1,6 +1,8 @@
-<div class="h-[400px] bg-[#FFFFFF] rounded-[24px] text-[12px] box-border p-[22px]" >
+<div class="h-[600px] bg-[#FFFFFF] rounded-[24px] text-[12px] box-border p-[22px]" >
     <div *ngFor="let x of announcement">
         <span class="text-[#01A559] font-bold text-center flex justify-end mb-[5px]">{{x.date}}</span>
-        <p class="text-black mb-[15px] leading-[18px] text-[14px]">{{x.title}}</p>
+        <p class="text-black mb-[15px] leading-[18px] text-[14px]"><span class="font-bold">
+            {{x.title}}
+        </span>{{x.text}}</p>
     </div>
 </div>
