@@ -1,5 +1,9 @@
 {
-    "welcome-back": "Welcome back",
-    "Project": "Project",
-    "Analytics": "Analytics"
+    "Dashboard": "Dashboard",
+    "natijalar": "Scores",
+    "ishtirokchilar": "Participants",
+    "tashkilotchilar": "Organizers",
+    "yangiliklar": "News",
+    "media": "Media",
+    "kirish": "Sing-in"
 }

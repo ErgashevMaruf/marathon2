@@ -6,7 +6,7 @@ interface City {
 @Component({
     selector     : 'landing-home',
     templateUrl  : './home.component.html',
-    styleUrls  : ['./home.style.scss'],
+    styleUrls  : ['./home.style.css'],
     encapsulation: ViewEncapsulation.None
 })
 export class LandingHomeComponent implements OnInit

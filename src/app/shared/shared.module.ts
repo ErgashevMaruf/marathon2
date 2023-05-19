@@ -12,6 +12,7 @@ import { TagModule } from 'primeng/tag';
 import { ScrollTopModule } from 'primeng/scrolltop';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { DiagrammComponent } from './diagramm/diagramm.component';
+import { TranslocoModule } from '@ngneat/transloco';
 @NgModule({
     declarations:[
         CaruselComponent,
@@ -29,7 +30,8 @@ import { DiagrammComponent } from './diagramm/diagramm.component';
         DropdownModule,
         TagModule,
         ScrollTopModule,
-        NgApexchartsModule
+        NgApexchartsModule,
+        TranslocoModule
     ],
     exports: [
         CommonModule,

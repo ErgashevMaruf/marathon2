@@ -1,5 +1,4 @@
 
-
 <!-- ****************************************************** -->
 <div class="bg-white w-full py-40px" id="main">
     <!-- Navigation start -->
@@ -12,11 +11,11 @@
     </div>
     <div class="nav__center">
         <ul class="flex gap-[40px] items-center">
-            <li><a href="#" class="cool-link">Yangiliklar</a></li>
-            <li><a href="#" class="cool-link">Natija</a></li>
-            <li><a href="#" class="cool-link">Ishtirokchilar</a></li>
-            <li><a href="#" class="cool-link">Tashkilotchilar</a></li>
-            <li><a href="#" class="cool-link">Media</a></li>
+            <li><a href="#" class="cool-link">{{"yangiliklar" | transloco}}</a></li>
+            <li><a href="#" class="cool-link">{{"natijalar" | transloco}}</a></li>
+            <li><a href="#" class="cool-link">{{"ishtirokchilar" | transloco}}</a></li>
+            <li><a href="#" class="cool-link">{{"tashkilotchilar" | transloco}}</a></li>
+            <li><a href="#" class="cool-link">{{"media" | transloco}}</a></li>
         </ul>
     </div>
     <div class="nav__right flex items-center gap-[10px]">
@@ -28,15 +27,14 @@
         </div>
         <div class="border-r-[2px] border-[#00000029] h-[30px]"></div>
         <div class="card flex justify-content-center">
-            <p-dropdown [options]="cities" [(ngModel)]="selectedCity" optionLabel="name">
-            </p-dropdown>
+            <languages></languages>
         </div>
         <div class="border-r-[2px] border-[#00000029] h-[30px]"></div>
         <div class="flex gap-[10px] cursor-pointer">
             <a [routerLink]="['/sign-in']">
                 <mat-icon class="text-[#02A3D3] text-[30px]">account_circle</mat-icon>
             </a>
-            <a class="font-semibold text-[16px]" [routerLink]="['/sign-in']">Kirish</a>
+            <a class="font-semibold text-[16px]" [routerLink]="['/sign-in']">{{"kirish" | transloco}}</a>
         </div>
     </div>
 </div>
@@ -50,7 +48,7 @@
 <div class="bg-[#F5F5F5] py-[60px] mb-[50px]">
     <div class="max-w-7xl mx-auto flex justify-center items-center">
         <div class="max-w-full grid grid-cols-1 bg-[#F5F5F5]">
-            <p class="font-bold text-[35px] mb-[30px]">Yangiliklar</p>
+            <p class="font-bold text-[35px] mb-[30px]">{{"yangiliklar" | transloco}}</p>
             <app-carusel></app-carusel>
         </div>
 
@@ -60,18 +58,18 @@
 
 <div class="w-full max-w-7xl mx-auto flex justify-between">
     <div>
-        <h3 class="text-[35px] font-bold mb-[20px]">Natija</h3>
+        <h3 class="text-[35px] font-bold mb-[20px]">{{"natijalar" | transloco}}</h3>
 <div class="max-w-[900px] mb-[20px] pb-[30px] pt-[10px] px-[30px] bg-[#F5F5F5] rounded-[20px]">
 <app-score></app-score>
 </div>
 
-<h3 class="text-[35px] font-bold mb-[20px]">Ishtirokchilar</h3>
+<h3 class="text-[35px] font-bold mb-[20px]">{{"ishtirokchilar" | transloco}}</h3>
 <div class="max-w-[900px] mb-[20px] pb-[30px] pt-[30px] px-[30px] bg-[#F5F5F5] rounded-[20px]">
     <app-diagramm></app-diagramm>
 </div>
     </div>
 <div class="w-[380px]">
-    <h4 class="text-[35px] font-bold">Yangiliklar</h4>
+    <h4 class="text-[35px] font-bold">{{"yangiliklar" | transloco}}</h4>
     <div class="shadow-xl rounded-[20px]">
         <app-announcement></app-announcement>
     </div>

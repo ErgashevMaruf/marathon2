@@ -12,6 +12,8 @@ import { GalleriaModule } from 'primeng/galleria';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ScrollTopModule } from 'primeng/scrolltop';
 import { PartnersComponent } from './partners/partners.component';
+import { LanguagesModule } from 'app/layout/common/languages/languages.module';
+import { TranslocoModule } from '@ngneat/transloco';
 @NgModule({
     declarations: [
         LandingHomeComponent,
@@ -27,7 +29,9 @@ import { PartnersComponent } from './partners/partners.component';
         DropdownModule,
         MatDialogModule,
         GalleriaModule,
-        ScrollTopModule
+        ScrollTopModule,
+        LanguagesModule,
+        TranslocoModule
     ]
 })
 export class LandingHomeModule

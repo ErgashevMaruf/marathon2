@@ -2,11 +2,15 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, OnIni
 import { take } from 'rxjs';
 import { AvailableLangs, TranslocoService } from '@ngneat/transloco';
 import { FuseNavigationService, FuseVerticalNavigationComponent } from '@fuse/components/navigation';
-
+interface language {
+    name: string;
+    code: string;
+}
 @Component({
     selector       : 'languages',
     templateUrl    : './languages.component.html',
-    encapsulation  : ViewEncapsulation.None,
+    styleUrls:['./language.component.scss'],
+    // encapsulation  : ViewEncapsulation.None,
     changeDetection: ChangeDetectionStrategy.OnPush,
     exportAs       : 'languages'
 })
@@ -30,12 +34,19 @@ export class LanguagesComponent implements OnInit, OnDestroy
     // -----------------------------------------------------------------------------------------------------
     // @ Lifecycle hooks
     // -----------------------------------------------------------------------------------------------------
+    languages: language[];
 
+    selectLanguage: language;
     /**
      * On init
      */
     ngOnInit(): void
     {
+        this.languages = [
+            { name: 'UZB', code: 'uz' },
+            { name: 'RUS', code: 'rus' },
+            { name: 'ENG', code: 'en' },
+        ];
         // Get the available languages from transloco
         this.availableLangs = this._translocoService.getAvailableLangs();
 
@@ -44,6 +55,7 @@ export class LanguagesComponent implements OnInit, OnDestroy
 
             // Get the active lang
             this.activeLang = activeLang;
+            console.log(activeLang);
 
             // Update the navigation
             this._updateNavigation(activeLang);
@@ -51,8 +63,8 @@ export class LanguagesComponent implements OnInit, OnDestroy
 
         // Set the country iso codes for languages for flags
         this.flagCodes = {
-            'en': 'us',
-            'tr': 'tr'
+            'tr': 'tr',
+            'en': 'en'
         };
     }
 
@@ -109,7 +121,11 @@ export class LanguagesComponent implements OnInit, OnDestroy
         // it's up to you.
 
         // Get the component -> navigation data -> item
+        console.log(lang);
+
         const navComponent = this._fuseNavigationService.getComponent<FuseVerticalNavigationComponent>('mainNavigation');
+        console.log(navComponent);
+
 
         // Return if the navigation component does not exist
         if ( !navComponent )
@@ -119,12 +135,13 @@ export class LanguagesComponent implements OnInit, OnDestroy
 
         // Get the flat navigation data
         const navigation = navComponent.navigation;
+        console.log(navigation);
 
         // Get the Project dashboard item and update its title
-        const projectDashboardItem = this._fuseNavigationService.getItem('dashboards.project', navigation);
+        const projectDashboardItem = this._fuseNavigationService.getItem('dashboard',navigation);
         if ( projectDashboardItem )
         {
-            this._translocoService.selectTranslate('Project').pipe(take(1))
+            this._translocoService.selectTranslate('Dashboard').pipe(take(1))
                 .subscribe((translation) => {
 
                     // Set the title

@@ -3,11 +3,12 @@ import { FuseNavigationItem } from '@fuse/components/navigation';
 
 export const defaultNavigation: FuseNavigationItem[] = [
     {
-        id   : 'example',
-        title: 'Example',
+        id   : 'dashboard',
+        title: 'Asosiy Menu',
         type : 'basic',
         icon : 'dashboardCustom',
-        link : '/example'
+        link : '/dashboard',
+        children:[]
     },
     {
         id   : 'profile',

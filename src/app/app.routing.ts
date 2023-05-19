@@ -8,15 +8,15 @@ import { InitialDataResolver } from 'app/app.resolvers';
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 export const appRoutes: Route[] = [
 
-    // Redirect empty path to '/example'
-    {path: '', pathMatch : 'full', redirectTo: 'example'},
+    // Redirect empty path to '/dashboard'
+    {path: '', pathMatch : 'full', redirectTo: 'dashboard'},
 
-    // Redirect signed-in user to the '/example'
+    // Redirect signed-in user to the '/dashboard'
     //
     // After the user signs in, the sign-in page will redirect the user to the 'signed-in-redirect'
     // path. Below is another redirection for that path to redirect the user to the desired
     // location. This is a small convenience to keep all main routes together here on this file.
-    {path: 'signed-in-redirect', pathMatch : 'full', redirectTo: 'example'},
+    {path: 'signed-in-redirect', pathMatch : 'full', redirectTo: 'dashboard'},
 
     // Auth routes for guests
     {
@@ -72,7 +72,7 @@ export const appRoutes: Route[] = [
             initialData: InitialDataResolver,
         },
         children: [
-            {path: 'example', loadChildren: () => import('app/modules/user/example/example.module').then(m => m.ExampleModule)},
+            {path: 'dashboard', loadChildren: () => import('app/modules/user/dashboard/dashboard.module').then(m => m.DashboardModule)},
             {path: 'scores', loadChildren: () => import('app/modules/user/scores/scores.module').then(m => m.ScoresModule)},
             {path: 'events', loadChildren: () => import('app/modules/user/events/events.module').then(m => m.EventsModule)},
             {path: 'feedback', loadChildren: () => import('app/modules/user/feedback/feedback.module').then(m => m.feedbackModule)},

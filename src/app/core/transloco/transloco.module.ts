@@ -13,16 +13,20 @@ import { TranslocoHttpLoader } from 'app/core/transloco/transloco.http-loader';
             useValue: translocoConfig({
                 availableLangs      : [
                     {
-                        id   : 'en',
-                        label: 'English'
+                        id   : 'uz',
+                        label: 'Uzbek'
                     },
                     {
-                        id   : 'tr',
-                        label: 'Turkish'
+                        id   : 'rus',
+                        label: 'Russian'
+                    },
+                    {
+                        id   : 'en',
+                        label: 'English'
                     }
                 ],
-                defaultLang         : 'en',
-                fallbackLang        : 'en',
+                defaultLang         : 'uz',
+                fallbackLang        : 'uz',
                 reRenderOnLangChange: true,
                 prodMode            : true
             })
