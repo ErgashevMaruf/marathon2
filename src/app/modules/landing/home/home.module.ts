@@ -5,7 +5,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { SharedModule } from 'app/shared/shared.module';
 import { LandingHomeComponent } from 'app/modules/landing/home/home.component';
 import { landingHomeRoutes } from 'app/modules/landing/home/home.routing';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 import { DropdownModule } from 'primeng/dropdown';
 import { AnnouncementComponent } from './announcement/announcement.component';
 import { GalleriaModule } from 'primeng/galleria';
@@ -14,14 +14,16 @@ import { ScrollTopModule } from 'primeng/scrolltop';
 import { PartnersComponent } from './partners/partners.component';
 import { LanguagesModule } from 'app/layout/common/languages/languages.module';
 import { TranslocoModule } from '@ngneat/transloco';
+import { VideoComponent } from './video/video.component';
 @NgModule({
     declarations: [
         LandingHomeComponent,
         AnnouncementComponent,
         GalleryComponent,
-        PartnersComponent
+        PartnersComponent,
+        VideoComponent
     ],
-    imports     : [
+    imports: [
         RouterModule.forChild(landingHomeRoutes),
         MatButtonModule,
         MatIconModule,
@@ -34,6 +36,5 @@ import { TranslocoModule } from '@ngneat/transloco';
         TranslocoModule
     ]
 })
-export class LandingHomeModule
-{
+export class LandingHomeModule {
 }

@@ -15,7 +15,7 @@ import { UserModule } from './modules/user/user.module';
 import { HttpClientModule } from "@angular/common/http";
 import { MatIconModule } from '@angular/material/icon';
 const routerConfig: ExtraOptions = {
-    preloadingStrategy       : PreloadAllModules,
+    preloadingStrategy: PreloadAllModules,
     scrollPositionRestoration: 'enabled'
 };
 
@@ -23,7 +23,7 @@ const routerConfig: ExtraOptions = {
     declarations: [
         AppComponent,
     ],
-    imports     : [
+    imports: [
         BrowserModule,
         BrowserAnimationsModule,
         RouterModule.forRoot(appRoutes, routerConfig),
@@ -43,10 +43,9 @@ const routerConfig: ExtraOptions = {
         MatIconModule
 
     ],
-    bootstrap   : [
+    bootstrap: [
         AppComponent
     ]
 })
-export class AppModule
-{
+export class AppModule {
 }

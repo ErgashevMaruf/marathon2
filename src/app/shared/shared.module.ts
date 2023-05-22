@@ -4,7 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CaruselComponent } from './carusel/carusel.component';
 import { CarouselModule } from 'primeng/carousel';
 import { FooterComponent } from './footer/footer.component';
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
 import { TableModule } from 'primeng/table';
 import { ScoreComponent } from './score/score.component';
 import { DropdownModule } from 'primeng/dropdown';
@@ -13,12 +13,14 @@ import { ScrollTopModule } from 'primeng/scrolltop';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { DiagrammComponent } from './diagramm/diagramm.component';
 import { TranslocoModule } from '@ngneat/transloco';
+import { NearestComponent } from './nearest/nearest.component';
 @NgModule({
-    declarations:[
+    declarations: [
         CaruselComponent,
         FooterComponent,
         ScoreComponent,
-        DiagrammComponent
+        DiagrammComponent,
+        NearestComponent
     ],
     imports: [
         CommonModule,
@@ -40,9 +42,9 @@ import { TranslocoModule } from '@ngneat/transloco';
         CaruselComponent,
         FooterComponent,
         ScoreComponent,
-        DiagrammComponent
+        DiagrammComponent,
+        NearestComponent
     ]
 })
-export class SharedModule
-{
+export class SharedModule {
 }
