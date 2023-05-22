@@ -40,13 +40,10 @@ export class LanguagesComponent implements OnInit, OnDestroy
     /**
      * On init
      */
+
     ngOnInit(): void
     {
-        this.languages = [
-            { name: 'UZB', code: 'uz' },
-            { name: 'RUS', code: 'rus' },
-            { name: 'ENG', code: 'en' },
-        ];
+
         // Get the available languages from transloco
         this.availableLangs = this._translocoService.getAvailableLangs();
 
@@ -59,6 +56,7 @@ export class LanguagesComponent implements OnInit, OnDestroy
 
             // Update the navigation
             this._updateNavigation(activeLang);
+
         });
 
         // Set the country iso codes for languages for flags
@@ -66,6 +64,11 @@ export class LanguagesComponent implements OnInit, OnDestroy
             'tr': 'tr',
             'en': 'en'
         };
+        this.languages = [
+            { name: 'UZB', code: 'uz' },
+            { name: 'RUS', code: 'rus' },
+            { name: 'ENG', code: 'en' },
+        ];
     }
 
     /**
@@ -121,10 +124,10 @@ export class LanguagesComponent implements OnInit, OnDestroy
         // it's up to you.
 
         // Get the component -> navigation data -> item
-        console.log(lang);
+
 
         const navComponent = this._fuseNavigationService.getComponent<FuseVerticalNavigationComponent>('mainNavigation');
-        console.log(navComponent);
+
 
 
         // Return if the navigation component does not exist

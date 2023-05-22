@@ -15,13 +15,18 @@ import { PartnersComponent } from './partners/partners.component';
 import { LanguagesModule } from 'app/layout/common/languages/languages.module';
 import { TranslocoModule } from '@ngneat/transloco';
 import { VideoComponent } from './video/video.component';
+import { TableModule } from 'primeng/table';
+import { ClubsComponent } from './clubs/clubs.component';
+import { OrganizersComponent } from './organizers/organizers.component';
 @NgModule({
     declarations: [
         LandingHomeComponent,
         AnnouncementComponent,
         GalleryComponent,
         PartnersComponent,
-        VideoComponent
+        VideoComponent,
+        ClubsComponent,
+        OrganizersComponent
     ],
     imports: [
         RouterModule.forChild(landingHomeRoutes),
@@ -33,7 +38,8 @@ import { VideoComponent } from './video/video.component';
         GalleriaModule,
         ScrollTopModule,
         LanguagesModule,
-        TranslocoModule
+        TranslocoModule,
+        TableModule
     ]
 })
 export class LandingHomeModule {

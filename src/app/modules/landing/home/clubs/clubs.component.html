@@ -1,0 +1,24 @@
+<p-table #dt1 [value]="clubs" [paginator]="true" [tableStyle]="{ 'min-width': '700px'}"
+scrollHeight="500px"
+[scrollable]="true"
+[rows]="8"
+[rowsPerPageOptions]="[10, 25, 50]"
+>
+<ng-template pTemplate="caption">
+<div class="flex justify-between">
+    <div>
+        <p-dropdown [options]="city" [(ngModel)]="selectCity" optionLabel="label">
+        </p-dropdown>
+    </div>
+</div>
+</ng-template>
+    <ng-template pTemplate="body" let-club let-rowIndex="rowIndex">
+        <tr>
+            <td>{{rowIndex+1}}</td>
+            <td>{{ club.name }}</td>
+            <td>{{ club.participant }}</td>
+            <td>{{ club.participant2 }}</td>
+            <td>{{club.date | date}}</td>
+        </tr>
+    </ng-template>
+</p-table>

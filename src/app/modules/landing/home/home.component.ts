@@ -1,4 +1,5 @@
 import { Component, ViewEncapsulation,OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 interface City {
     name: string;
     code: string;
@@ -14,18 +15,10 @@ export class LandingHomeComponent implements OnInit
     /**
      * Constructor
      */
-    cities: City[];
-
-    selectedCity: City;
     constructor()
     {
     }
     ngOnInit(): void {
-        this.cities = [
-            { name: 'UZB', code: 'NY' },
-            { name: 'RUS', code: 'RM' },
-            { name: 'ENG', code: 'LDN' },
-        ];
     }
 
 }

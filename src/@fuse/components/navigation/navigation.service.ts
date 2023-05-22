@@ -48,6 +48,12 @@ export class FuseNavigationService
      */
     getComponent<T>(name: string): T
     {
+        if(!this._componentRegistry.values())
+        {
+            console.log("Empty");
+
+        }
+
         return this._componentRegistry.get(name);
     }
 

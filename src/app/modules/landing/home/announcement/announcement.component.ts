@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AnnounceService,announce } from './announce.service';
+import {timer} from 'rxjs'
 @Component({
   selector: 'app-announcement',
   templateUrl: './announcement.component.html',
