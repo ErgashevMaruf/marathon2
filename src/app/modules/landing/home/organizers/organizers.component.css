@@ -2,3 +2,7 @@
     height: 42px !important;
     width: 42px !important;
 }
+
+.card{
+    background: url('/assets/computer.png')
+}
