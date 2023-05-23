@@ -18,6 +18,9 @@ import { VideoComponent } from './video/video.component';
 import { TableModule } from 'primeng/table';
 import { ClubsComponent } from './clubs/clubs.component';
 import { OrganizersComponent } from './organizers/organizers.component';
+import { CarouselModule } from 'primeng/carousel';
+import { Info } from 'luxon';
+import { InfoComponent } from './info/info.component';
 @NgModule({
     declarations: [
         LandingHomeComponent,
@@ -26,7 +29,8 @@ import { OrganizersComponent } from './organizers/organizers.component';
         PartnersComponent,
         VideoComponent,
         ClubsComponent,
-        OrganizersComponent
+        OrganizersComponent,
+        InfoComponent
     ],
     imports: [
         RouterModule.forChild(landingHomeRoutes),
@@ -39,7 +43,9 @@ import { OrganizersComponent } from './organizers/organizers.component';
         ScrollTopModule,
         LanguagesModule,
         TranslocoModule,
-        TableModule
+        TableModule,
+        MatIconModule,
+        CarouselModule
     ]
 })
 export class LandingHomeModule {

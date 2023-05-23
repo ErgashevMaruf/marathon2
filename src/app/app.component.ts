@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatIconRegistry } from "@angular/material/icon";
-import { DomSanitizer } from "@angular/platform-browser";
+import { DomSanitizer } from '@angular/platform-browser';
 @Component({
     selector   : 'app-root',
     templateUrl: './app.component.html',
@@ -59,6 +59,30 @@ export class AppComponent
           this.matIconRegistry.addSvgIcon(
             "monitorCustom",
             this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/customSvg/monitorCustom.svg")
+          );
+          this.matIconRegistry.addSvgIcon(
+            "buildingCustom",
+            this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/customSvg/buildingCustom.svg")
+          );
+          this.matIconRegistry.addSvgIcon(
+            "checkEventCustom",
+            this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/customSvg/checkEvent.svg")
+          );
+          this.matIconRegistry.addSvgIcon(
+            "calendarCustom",
+            this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/customSvg/calendarCustom.svg")
+          );
+          this.matIconRegistry.addSvgIcon(
+            "events",
+            this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/customSvg/events.svg")
+          );
+          this.matIconRegistry.addSvgIcon(
+            "organization",
+            this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/customSvg/organization.svg")
+          );
+          this.matIconRegistry.addSvgIcon(
+            "people",
+            this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/customSvg/people.svg")
           );
     }
 }

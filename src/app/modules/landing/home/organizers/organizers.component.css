@@ -6,3 +6,8 @@
 .card{
     background: url('/assets/computer.png')
 }
+.calendarCustom{
+height: 20px !important;
+right: 5px !important;
+top: 8px !important
+}

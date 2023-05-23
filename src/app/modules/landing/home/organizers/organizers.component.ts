@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GalleryService } from '../gallery/gallery.service';
+import { GalleryService } from '../../../services/gallery.service';
 @Component({
   selector: 'app-organizers',
   templateUrl: './organizers.component.html',

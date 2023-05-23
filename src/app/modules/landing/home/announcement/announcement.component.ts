@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AnnounceService,announce } from './announce.service';
+import { AnnounceService,announce } from 'app/modules/services/announce.service';
 import {timer} from 'rxjs'
 @Component({
   selector: 'app-announcement',

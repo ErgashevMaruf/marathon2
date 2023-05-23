@@ -83,7 +83,8 @@ const config = {
             '7xl' : '3rem',
             '8xl' : '4rem',
             '9xl' : '6rem',
-            '10xl': '8rem'
+            '10xl': '8rem',
+            'h3':'35px'
         },
         screens : {
             sm: '600px',
@@ -222,7 +223,7 @@ const config = {
                             color: 'var(--fuse-text-default)'
                         },
                         h3                 : {
-                            color: 'var(--fuse-text-default)'
+                            color: 'var(--fuse-text-default)',
                         },
                         h4                 : {
                             color: 'var(--fuse-text-default)'

@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable,tap,} from 'rxjs';
-import { message } from './feedback/message/message.type';
+import { message } from './message.type';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
+export class MessageService {
 
 
 private _events: BehaviorSubject<message[] | null> = new BehaviorSubject(null);

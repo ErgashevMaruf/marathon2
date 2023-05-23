@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { message } from './message.type';
+import { message } from '../../../services/message/message.type';
 import { LazyLoadEvent } from 'primeng/api';
-import { UserService } from '../../user.service';
+import { MessageService } from 'app/modules/services/message/message.service';
 @Component({
   selector: 'app-message',
   templateUrl: './message.component.html',
@@ -12,7 +12,7 @@ export class MessageComponent implements OnInit {
     tableData:message[] = [];
     loading: boolean = false;
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: MessageService) { }
 
   ngOnInit() {
     this.cols = [
