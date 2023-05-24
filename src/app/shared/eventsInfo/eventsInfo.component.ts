@@ -12,7 +12,7 @@ year: any;
   constructor(private events: EventsService) { }
 
   ngOnInit() {
-    this.events.getCategories().subscribe((res)=>{
+    this.events.getEvent().subscribe((res)=>{
         this.allevents = res;
         console.log(this.allevents);
         this.year = new Date().getFullYear();

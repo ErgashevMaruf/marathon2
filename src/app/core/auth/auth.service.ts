@@ -7,7 +7,7 @@ import { UserService } from 'app/core/user/user.service';
 @Injectable()
 export class AuthService
 {
-    private _authenticated: boolean = false;
+    _authenticated: boolean = false;
 
     /**
      * Constructor

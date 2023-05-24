@@ -1,7 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Events } from 'app/modules/services/events/event.type';
 import { EventsService } from 'app/modules/services/events/events.service';
-
+import { Router } from '@angular/router';
+import { AuthService } from 'app/core/auth/auth.service';
 @Component({
     selector: 'app-carusel',
     templateUrl: './carusel.component.html',
@@ -15,10 +16,10 @@ export class CaruselComponent implements OnInit {
 
     responsiveOptions: any[];
 
-    constructor(private eventService: EventsService) { }
+    constructor(private eventService: EventsService, private router: Router, private auth: AuthService) { }
 
     ngOnInit() {
-        this.eventService.getCategories().subscribe(res => {
+        this.eventService.getEvent().subscribe(res => {
             this.events = res;
             console.log(res);
 
@@ -42,5 +43,17 @@ export class CaruselComponent implements OnInit {
             }
         ];
     }
+    onclickJoin(event:any)
+{
+
+    if(this.auth._authenticated)
+    {
+        this.router.navigateByUrl('/events/list')
+    }
+    else{
+        this.router.navigateByUrl('/sign-in');
+    }
+
+}
 
 }
