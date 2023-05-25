@@ -10,8 +10,8 @@ import { AuthService } from 'app/core/auth/auth.service';
 })
 export class CaruselComponent implements OnInit {
 
-    @Input() numVisible = 3;
-
+    @Input() numVisible = 4;
+    @Input() bg ='white'
     events: Events[];
 
     responsiveOptions: any[];

@@ -30,8 +30,8 @@ import { InfoComponent } from './info/info.component';
         VideoComponent,
         ClubsComponent,
         OrganizersComponent,
-        InfoComponent
-    ],
+        InfoComponent,
+   ],
     imports: [
         RouterModule.forChild(landingHomeRoutes),
         MatButtonModule,

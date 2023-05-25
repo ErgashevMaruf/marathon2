@@ -1,0 +1,7 @@
+<p-carousel [value]="products" [numVisible]="1" [numScroll]="1" [autoplayInterval]=5000 [circular]="true" orientation="vertical" [verticalViewPortHeight]="verticalView" >
+    <ng-template let-product pTemplate="item">
+        <div class="rounded-xl">
+            <img src="./assets/images/advertise/{{nike}}" class="object-cover rounded-[20px]" alt="" [style.width]="imgWidth" [style.height]="imgHeight">
+        </div>
+    </ng-template>
+</p-carousel>

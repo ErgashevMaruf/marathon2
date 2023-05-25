@@ -14,13 +14,15 @@ import { NgApexchartsModule } from 'ng-apexcharts';
 import { DiagrammComponent } from './diagramm/diagramm.component';
 import { TranslocoModule } from '@ngneat/transloco';
 import { NearestComponent } from './nearest/nearest.component';
+import { AdvertisingComponent } from './advertising/advertising.component';
 @NgModule({
     declarations: [
         CaruselComponent,
         FooterComponent,
         ScoreComponent,
         DiagrammComponent,
-        NearestComponent
+        NearestComponent,
+        AdvertisingComponent
     ],
     imports: [
         CommonModule,
@@ -43,7 +45,8 @@ import { NearestComponent } from './nearest/nearest.component';
         FooterComponent,
         ScoreComponent,
         DiagrammComponent,
-        NearestComponent
+        NearestComponent,
+        AdvertisingComponent
     ]
 })
 export class SharedModule {

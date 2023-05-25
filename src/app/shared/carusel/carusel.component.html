@@ -2,17 +2,17 @@
 <div class="card">
     <p-carousel [value]="events" [numVisible]="numVisible" [numScroll]="3" [circular]="true" [responsiveOptions]="responsiveOptions" autoPlayInterval="3000">
         <ng-template let-events pTemplate="item">
-            <div class="w-[300px] h-[450px] rounded-[10px] flex flex-col justify-center overflow-hidden card-items bg-white shadow-[0_3px_6x_rgba(0, 0, 0, 0.16)]">
+            <div class="w-[260px] h-[450px] rounded-[10px] flex flex-col overflow-hidden  shadow-[0_3px_6x_rgba(0, 0, 0, 0.16)]" [style.backgroundColor]="bg">
                 <div class="mb-3">
                     <img src="assets/images/Events/{{ events.image }}"  [alt]="events.name" class="shadow-2 h-[215px] object-cover" />
                 </div>
                 <h4 class="mb-1 text-center font-bold">{{ events.title }}</h4>
                 <div class="text-left text-[14px] flex flex-col ml-[28px] gap-[8px]">
-                    <p class="font-bold">Date:<span class="font-normal">{{events.date}}</span></p>
-                <p class="font-bold">Participants:<span class="font-normal">{{events.participants}}</span></p>
-                <p class="font-bold">Location:<span class="font-normal">{{events.participants}}</span></p>
-                <p class="mt-0 mb-3 font-bold">Cost:<span class="font-normal">{{ '$' + events.cost }}</span></p>
-                    <button (click)="onclickJoin(events.id)" class="rounded-[14px] btn bg-[#01A559] text-white font-bold mr-[25px]">Join Us</button>
+                    <p class="font-medium">Date:<span class="font-normal">{{events.date}}</span></p>
+                <p class="font-medium">Participants:<span class="font-normal">{{events.participants}}</span></p>
+                <p class="font-medium">Location:<span class="font-normal">{{events.participants}}</span></p>
+                <p class="mt-0 mb-3 font-medium">Cost:<span class="font-normal">{{ '$' + events.cost }}</span></p>
+                    <button (click)="onclickJoin(events.id)" class="rounded-[10px] btn bg-[#01A559] text-white font-bold mr-[25px]">Join Us</button>
                 </div>
             </div>
         </ng-template>

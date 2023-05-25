@@ -1,0 +1,13 @@
+:host ::ng-deep .p-carousel .p-carousel-content .p-carousel-prev, .p-carousel .p-carousel-content .p-carousel-next
+{
+    display: none !important;
+}
+
+:host ::ng-deep  .p-carousel-next
+{
+    display: none !important;
+}
+:host ::ng-deep .p-carousel-indicators {
+    display: none !important;
+
+}

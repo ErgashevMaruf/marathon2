@@ -1,4 +1,5 @@
 import { Component, ViewEncapsulation,OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 interface City {
     name: string;
@@ -12,6 +13,7 @@ interface City {
 })
 export class LandingHomeComponent implements OnInit
 {
+    username = new FormControl();
     /**
      * Constructor
      */

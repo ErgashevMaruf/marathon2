@@ -8,8 +8,10 @@ import { Component, ViewEncapsulation } from '@angular/core';
 export class DashboardComponent
 {
     /**
+     *
      * Constructor
      */
+    red = 'red';
     constructor()
     {
     }
