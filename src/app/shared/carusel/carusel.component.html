@@ -1,8 +1,14 @@
 
 <div class="card">
-    <p-carousel [value]="events" [numVisible]="numVisible" [numScroll]="3" [circular]="true" [responsiveOptions]="responsiveOptions" autoPlayInterval="3000">
+    <p-carousel [value]="events" [numVisible]="numVisible" [numScroll]="1" [circular]="true" [responsiveOptions]="responsiveOptions" autoPlayInterval=3000>
         <ng-template let-events pTemplate="item">
-            <div class="w-[260px] h-[450px] rounded-[10px] flex flex-col overflow-hidden  shadow-[0_3px_6x_rgba(0, 0, 0, 0.16)]" [style.backgroundColor]="bg">
+            <div  class="carusel w-[260px] h-[450px] rounded-[10px] flex flex-col overflow-hidden  shadow-[0_3px_6x_rgba(0, 0, 0, 0.16)]" [style.backgroundColor]="bg"
+            (mousedown)="mousedown($event)"
+            (mouseleave)="mouseleave($event)"
+            (mouseup)="mouseup($event)"
+            (mousemove)="mousemove($event)"
+            #scroll
+            >
                 <div class="mb-3">
                     <img src="assets/images/Events/{{ events.image }}"  [alt]="events.name" class="shadow-2 h-[215px] object-cover" />
                 </div>

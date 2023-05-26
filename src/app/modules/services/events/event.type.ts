@@ -1,6 +1,6 @@
 export interface Events{
-    image:string ,
     id: string,
+    image:string ,
     title:string,
     date:Date,
     participants: number

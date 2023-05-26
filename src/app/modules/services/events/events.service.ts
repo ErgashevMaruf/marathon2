@@ -21,23 +21,23 @@ export class EventsService {
     }
     getEventById(id: string): Observable<Events>
     {
-        return this._httpClient.get<Events>('api/events/allEvents', {params: {id}}).pipe(
-            map((event) => {
+        return this._httpClient.get<Events>('api/events/allEvents/events', {params: {id}}).pipe(
+            map((events) => {
 
                 // Update the course
-                this._event.next(event);
+                this._event.next(events);
 
                 // Return the course
-                return event;
+                return events;
             }),
-            switchMap((event) => {
+            switchMap((events) => {
 
-                if ( !event )
+                if ( !events)
                 {
                     return throwError('Could not found course with id of ' + id + '!');
                 }
 
-                return of(event);
+                return of(events);
             })
         );
     }
