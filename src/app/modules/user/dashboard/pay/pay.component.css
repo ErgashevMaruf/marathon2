@@ -1,0 +1,22 @@
+/* :host ::ng-deep .p-datatable-table table tr::first-child {
+    background: red;
+} */
+tr:nth-child(odd) {background-color: #f2f2f2;}
+:host ::ng-deep .p-scroller{
+    height: 500px !important;
+    border-radius: 20px !important;
+}
+:host ::ng-deep .p-datatable .p-datatable-tfoot > tr > td
+{
+    background: white !important;
+    border: none !important;
+}
+:host ::ng-deep .p-datatable-wrapper::-webkit-scrollbar {
+    width: 15px;
+    border-radius: 10px;
+    background: #EBEFF1;
+}
+:host ::ng-deep .p-datatable-wrapper::-webkit-scrollbar-thumb {
+    height: 2rem;
+    background: #02A3D3
+}

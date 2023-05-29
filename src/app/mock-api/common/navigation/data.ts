@@ -4,7 +4,7 @@ import { FuseNavigationItem } from '@fuse/components/navigation';
 export const defaultNavigation: FuseNavigationItem[] = [
     {
         id   : 'dashboard',
-        title: 'Asosiy Menu',
+        title: 'Dashboard',
         type : 'basic',
         icon : 'dashboardCustom',
         link : '/dashboard',
@@ -30,13 +30,6 @@ export const defaultNavigation: FuseNavigationItem[] = [
         type : 'basic',
         icon : 'scoreCustom',
         link : '/scores'
-    },
-    {
-        id   : 'pay',
-        title: 'Payment',
-        type : 'basic',
-        icon : 'payCustom',
-        link : '/pay'
     },
     {
         id   : 'feedback',

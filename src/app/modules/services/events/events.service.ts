@@ -23,7 +23,6 @@ export class EventsService {
     {
         return this._httpClient.get<Events>('api/events/allEvents/events', {params: {id}}).pipe(
             map((events) => {
-
                 // Update the course
                 this._event.next(events);
 

@@ -9,23 +9,20 @@ import { AuthService } from 'app/core/auth/auth.service';
     styleUrls: ['./carusel.component.css']
 })
 export class CaruselComponent implements OnInit {
-    @ViewChild('scroll') scroll;
     @Input() numVisible = 4;
     @Input() bg ='white'
     events: Events[];
-    pressed = false;
-    startX = 0;
     responsiveOptions: any[];
 
     constructor(private eventService: EventsService, private router: Router, private auth: AuthService) { }
 
     ngOnInit() {
-        console.log(this.scroll);
 
         this.eventService.getEvent().subscribe(res => {
             this.events = res;
+        })
+        this.eventService.getEventById('1009').subscribe(res=>{
             console.log(res);
-
         })
 
         this.responsiveOptions = [
@@ -51,34 +48,11 @@ export class CaruselComponent implements OnInit {
 
     if(this.auth._authenticated)
     {
-        this.router.navigateByUrl('/events/list')
+        this.router.navigateByUrl('/events/1002')
     }
     else{
         this.router.navigateByUrl('/sign-in');
     }
-
-}
-mousedown(event)
-{
-    this.pressed = true;
-   this.startX = event.clientX;
-    event.currentTarget.style.cursor = 'grabbing'
-
-}
-mouseleave(event)
-{
-    this.pressed = false;
-}
-mouseup(event)
-{
-    this.pressed = false;
-    event.currentTarget.style.cursor = 'grab'
-}
-mousemove(event)
-{
-    if(!this.pressed) return
-
-    event.target.scrollLeft+=this.startX-event.clientX;
 
 }
 }

@@ -33,7 +33,6 @@ export class ScoreComponent implements OnInit {
         this.scores =res;
         this.loading = false;
                     this.scores.forEach((customer) => (customer.date = new Date(customer.date)));
-                    console.log(this.scores[1].date.getMonth());
 
     });
     this.year = [
@@ -58,10 +57,4 @@ export class ScoreComponent implements OnInit {
         { label: 'Namangan', value: '10' },
     ];
   }
-  find(event:any)
-  {
-        console.log(event);
-
-  }
-
 }

@@ -41,7 +41,7 @@ export class EventsMockApi {
                 return [200, categories];
             });
             this._fuseMockApiService
-            .onGet('api/apps/academy/allEvents/events')
+            .onGet('api/events/allEvents/events')
             .reply(({request}) => {
 
                 // Get the id from the params

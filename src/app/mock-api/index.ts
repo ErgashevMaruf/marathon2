@@ -28,6 +28,7 @@ import { MessageMockApi } from './message/api';
 import { galleryMockApi } from './gallery/api';
 import { ClubsMockApi } from './clubs/api';
 import { InfoMockApi } from './info/api';
+import { payMockApi } from './pay/api';
 export const mockApiServices = [
     AcademyMockApi,
     ActivitiesMockApi,
@@ -58,5 +59,6 @@ export const mockApiServices = [
     MessageMockApi,
     galleryMockApi,
     ClubsMockApi,
-    InfoMockApi
+    InfoMockApi,
+    payMockApi
 ];

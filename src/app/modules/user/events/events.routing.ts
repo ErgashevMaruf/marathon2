@@ -7,24 +7,15 @@ export const eventsRoutes: Route[] = [
     {
         path     : '',
         component: EventsComponent,
-        resolve  : {
-            categories: EventsResolver
-        },
         children : [
             {
                 path     : '',
                 pathMatch: 'full',
                 component: ListComponent,
-                resolve  : {
-                    courses: EventsResolver
-                }
             },
             {
                 path     : ':id',
                 component: DetailsComponent,
-                resolve  : {
-                    course: eventResolver
-                }
             }
         ]
     }

@@ -11,7 +11,7 @@ const scoreRoutes: Route[] = [
 
 @NgModule({
     declarations: [
-        ScoresComponent
+        ScoresComponent,
     ],
     imports     : [
         RouterModule.forChild(scoreRoutes),

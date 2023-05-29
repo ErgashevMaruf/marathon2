@@ -15,6 +15,9 @@ import { DiagrammComponent } from './diagramm/diagramm.component';
 import { TranslocoModule } from '@ngneat/transloco';
 import { NearestComponent } from './nearest/nearest.component';
 import { AdvertisingComponent } from './advertising/advertising.component';
+import { EventsInfoComponent } from './eventsInfo/eventsInfo.component';
+import { MyEventsComponent } from './myEvents/myEvents.component';
+import { Route, RouterModule } from '@angular/router';
 @NgModule({
     declarations: [
         CaruselComponent,
@@ -22,7 +25,9 @@ import { AdvertisingComponent } from './advertising/advertising.component';
         ScoreComponent,
         DiagrammComponent,
         NearestComponent,
-        AdvertisingComponent
+        AdvertisingComponent,
+        EventsInfoComponent,
+        MyEventsComponent
     ],
     imports: [
         CommonModule,
@@ -35,7 +40,8 @@ import { AdvertisingComponent } from './advertising/advertising.component';
         TagModule,
         ScrollTopModule,
         NgApexchartsModule,
-        TranslocoModule
+        TranslocoModule,
+        RouterModule
     ],
     exports: [
         CommonModule,
@@ -46,7 +52,9 @@ import { AdvertisingComponent } from './advertising/advertising.component';
         ScoreComponent,
         DiagrammComponent,
         NearestComponent,
-        AdvertisingComponent
+        AdvertisingComponent,
+        EventsInfoComponent,
+        MyEventsComponent
     ]
 })
 export class SharedModule {
