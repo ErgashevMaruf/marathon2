@@ -145,4 +145,21 @@ export class VideoComponent implements OnInit {
        document.exitFullscreen();
     }
   }
+  openSetting()
+  {
+    const settings = document.querySelector(".settings")
+    const settingsBtn = document.querySelector(".settingsBtn")
+    settings.classList.toggle('active');
+    settingsBtn.classList.toggle('active');
+  }
+  videoSpeed($event)
+  {
+   const playback = document.querySelectorAll(".playback li");
+   playback.forEach(e=>{
+    e.classList.remove('active');
+   })
+   $event.target.classList.add('active');
+   let speed = $event.target.getAttribute('data-speed');
+   this.video.nativeElement.playbackRate = speed;
+  }
 }
