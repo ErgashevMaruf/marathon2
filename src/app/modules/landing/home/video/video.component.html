@@ -1,6 +1,6 @@
-<!-- <div class="container">
+<div class="container">
     <div class="video_player">
-      <video class="main-video" #video>
+      <video class="main-video" #video (loadeddata)="allvideoTime()" (timeupdate)="timeupdate()">
         <source src="./assets/Inspirational Running Video (HD).mp4" size="480" type="video/mp4">
         <source src="How to add twak.to chat app in website-1080p.mp4" size="1080" type="video/mp4">
         <track label="English" kind="subtitles" src="./How To Get Started With VSCode.vtt" srclang="en">
@@ -9,9 +9,9 @@
       <div class="loader"></div>
   <p class="caption_text"></p>
   <div class="progressAreaTime" >0:00</div>
-  
+
   <div class="controls active">
-    <div class="progress-area">
+    <div class="progress-area" (click)="changeArea($event)" (mousemove)="showTime($event)" (mouseleave)="hideTime()">
       <canvas class="bufferedBar"></canvas>
       <div class="progress-bar">
         <span></span>
@@ -20,25 +20,25 @@
 
     <div class="controls-list">
       <div class="controls-left">
-        
+
         <span class="icon">
             <i class="material-icons play_pause text-[60px]"  (click)="toggle()"  #paused>play_arrow</i>
           </span>
 
         <span class="icon">
-        <i class="material-symbols-outlined">
+        <i class="material-symbols-outlined cursor-pointer select-none" (click)="last()">
         skip_previous
         </i></span>
-        
+
         <span class="icon">
-            <i class="material-symbols-outlined">
+            <i class="material-symbols-outlined cursor-pointer select-none" (click)="forward()">
                 skip_next</i>
         </span>
 
         <span class="icon">
-          <i class="material-icons volume">volume_up</i>
+          <i class="material-icons volume" (click)="mute()">volume_up</i>
 
-          <input type="range" min="0" max="100" class="volume_range" />
+          <input type="range" min="0" max="100" class="volume_range" (input)="volume($event.target.value, element1)" #element1>
         </span>
 
         <div class="timer">
@@ -47,29 +47,17 @@
         </div>
       </div>
 
-      <div class="controls-right"> -->
-        <!-- <span class="icon">
-          <i class="material-icons auto-play"></i>
-        </span> -->
-        <!-- <span class="icon">
+      <div class="controls-right">
+        <span class="icon">
             <i class="material-symbols-outlined">
                 download
             </i>
-        </span> -->
-        <!-- <span class="icon">
-          <i class="material-icons captionsBtn">closed_caption</i>
-        </span> -->
-
-        <!-- <span class="icon">
+        </span>
+         <span class="icon">
           <i class="material-icons settingsBtn">settings</i>
         </span>
-
         <span class="icon">
-          <i class="material-icons picture_in_picutre">picture_in_picture_alt</i>
-        </span>
-
-        <span class="icon">
-          <i class="material-icons fullscreen">fullscreen</i>
+          <i class="material-icons fullscreen" (click)="toggleScreen()">fullscreen</i>
         </span>
       </div>
     </div>
@@ -133,12 +121,9 @@
     <div class="caption">
       <span>Select Subtitle</span>
       <ul>
-        
       </ul>
     </div>
   </div>
     </div>
 
-  </div> -->
-  <div class="max-w-[900px] bg-black h-[500px]">
   </div>

@@ -19,7 +19,6 @@ import { TableModule } from 'primeng/table';
 import { ClubsComponent } from './clubs/clubs.component';
 import { OrganizersComponent } from './organizers/organizers.component';
 import { CarouselModule } from 'primeng/carousel';
-import { Info } from 'luxon';
 import { InfoComponent } from './info/info.component';
 @NgModule({
     declarations: [
@@ -45,7 +44,7 @@ import { InfoComponent } from './info/info.component';
         TranslocoModule,
         TableModule,
         MatIconModule,
-        CarouselModule
+        CarouselModule,
     ]
 })
 export class LandingHomeModule {

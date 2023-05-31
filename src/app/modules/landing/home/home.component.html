@@ -53,8 +53,8 @@
                 <img
                     src="./assets/icons/disturb.png"
                     alt=""
-                    class="w-[20px] h-[20px]"
-                />
+                    class="w-[20px] h-[20px] cursor-pointer"
+               (click)="setScheme('dark')" />
             </div>
             <div class="border-r-[2px] border-[#00000029] h-[30px]"></div>
             <div class="card flex justify-content-center">
@@ -154,7 +154,24 @@
     <h3 class="text-[35px] font-bold my-[20px]">Tashkilotchilar</h3>
     <app-organizers></app-organizers>
     <div class="w-full max-w-7xl mx-auto mb-[30px]">
-        <app-gallery></app-gallery>
+        <div class="flex gap-[20px] mb-[30px]">
+            <h3>Media</h3>
+        <p-dropdown [options]="listItems" [(ngModel)]="selectedItem">
+            <ng-template let-item pTemplate="selectedItem">
+                <div class="flex gap-[10px] items-center">
+                    <mat-icon svgIcon="{{item.label}}"></mat-icon>
+                 <span>{{item.value}}</span>
+                 </div>
+            </ng-template>
+            <ng-template let-object pTemplate="item">
+                 <div class="flex gap-[10px] items-center">
+                    <mat-icon svgIcon="{{object.label}}"></mat-icon>
+                 <span>{{object.value}}</span>
+                 </div>
+            </ng-template>
+            </p-dropdown>
+        </div>
+        <app-gallery *ngIf="selectedItem=='Gallery'"></app-gallery>
     </div>
     <app-partners></app-partners>
     <div class="bg-black">

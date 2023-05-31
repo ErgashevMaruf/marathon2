@@ -84,5 +84,13 @@ export class AppComponent
             "people",
             this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/customSvg/people.svg")
           );
+          this.matIconRegistry.addSvgIcon(
+            "customGallery",
+            this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/customSvg/customGallery.svg")
+          );
+          this.matIconRegistry.addSvgIcon(
+            "customVideo",
+            this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/customSvg/customVideo.svg")
+          );
     }
 }

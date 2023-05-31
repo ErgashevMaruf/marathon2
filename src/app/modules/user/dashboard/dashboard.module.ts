@@ -4,6 +4,8 @@ import { DashboardComponent} from 'app/modules/user/dashboard/dashboard.componen
 import { SharedModule } from 'app/shared/shared.module';
 import { TableModule } from 'primeng/table';
 import { PayComponent } from './pay/pay.component';
+import { settingsModule } from '../settings/settings.module';
+import { SettingsModule } from 'app/layout/common/settings/settings.module';
 const exampleRoutes: Route[] = [
     {
         path     : '',
@@ -19,7 +21,8 @@ const exampleRoutes: Route[] = [
     imports     : [
         RouterModule.forChild(exampleRoutes),
         SharedModule,
-        TableModule
+        TableModule,
+        SettingsModule
     ]
 })
 export class DashboardModule
