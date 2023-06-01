@@ -20,6 +20,7 @@ import { ClubsComponent } from './clubs/clubs.component';
 import { OrganizersComponent } from './organizers/organizers.component';
 import { CarouselModule } from 'primeng/carousel';
 import { InfoComponent } from './info/info.component';
+import { VideoGalleryComponent } from '../videoGallery/videoGallery.component';
 @NgModule({
     declarations: [
         LandingHomeComponent,
@@ -30,6 +31,7 @@ import { InfoComponent } from './info/info.component';
         ClubsComponent,
         OrganizersComponent,
         InfoComponent,
+        VideoGalleryComponent
    ],
     imports: [
         RouterModule.forChild(landingHomeRoutes),
