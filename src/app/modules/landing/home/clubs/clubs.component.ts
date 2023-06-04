@@ -8,14 +8,14 @@ import { clubs } from 'app/modules/services/club/club.type';
 })
 export class ClubsComponent implements OnInit {
 
-    clubs: clubs[];
-  constructor( private club: ClubService) { }
+  clubs: clubs[];
+  selectClub = 'All';
+  constructor(private club: ClubService) { }
 
   ngOnInit() {
-    this.club.getClubs().subscribe(res=>{
-        this.clubs =res;
-        console.log(this.clubs);
-
+    this.club.getClubs().subscribe(res => {
+      this.clubs = res;
+      console.log(this.clubs);
     })
   }
 

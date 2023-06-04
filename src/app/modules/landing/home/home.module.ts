@@ -21,6 +21,9 @@ import { OrganizersComponent } from './organizers/organizers.component';
 import { CarouselModule } from 'primeng/carousel';
 import { InfoComponent } from './info/info.component';
 import { VideoGalleryComponent } from '../videoGallery/videoGallery.component';
+import { CountUpDirective } from 'app/core/directives/countUpDirective';
+import { NavComponent } from './nav/nav.component';
+import { SettingsModule } from 'app/layout/common/settings/settings.module';
 @NgModule({
     declarations: [
         LandingHomeComponent,
@@ -31,8 +34,10 @@ import { VideoGalleryComponent } from '../videoGallery/videoGallery.component';
         ClubsComponent,
         OrganizersComponent,
         InfoComponent,
-        VideoGalleryComponent
-   ],
+        VideoGalleryComponent,
+        CountUpDirective,
+        NavComponent,
+    ],
     imports: [
         RouterModule.forChild(landingHomeRoutes),
         MatButtonModule,
@@ -47,6 +52,7 @@ import { VideoGalleryComponent } from '../videoGallery/videoGallery.component';
         TableModule,
         MatIconModule,
         CarouselModule,
+        SettingsModule
     ]
 })
 export class LandingHomeModule {

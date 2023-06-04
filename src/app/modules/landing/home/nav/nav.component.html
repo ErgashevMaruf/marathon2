@@ -1,0 +1,69 @@
+<div
+        class="flex justify-between max-w-7xl mx-auto py-[30px] items-center h-[119px]"
+    >
+        <div class="nav__left flex items-center">
+            <img
+                src="./assets/images/logo/navLogo.png"
+                alt=""
+                class="w-[116px] h-[116px]"
+            />
+            <div class="w-[152px] font-semibold">
+                <p>Sog'lomlashtirish onlayn platformasi</p>
+            </div>
+        </div>  
+        <div class="nav__center">
+            <ul class="flex gap-[40px] items-center" (click)="move($event)">
+                <li>
+                    <a href="#news" class="cool-link" >{{
+                        "yangiliklar" | transloco
+                    }}</a>
+                </li>
+                <li>
+                    <a href="#score" class="cool-link">{{
+                        "natijalar" | transloco
+                    }}</a>
+                </li>
+                <li>
+                    <a href="#participants" class="cool-link">{{
+                        "ishtirokchilar" | transloco
+                    }}</a>
+                </li>
+                <li>
+                    <a href="#organizers" class="cool-link">{{
+                        "tashkilotchilar" | transloco
+                    }}</a>
+                </li>
+                <li>
+                    <a href="#media" class="cool-link">{{ "media" | transloco }}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="nav__right flex items-center gap-[10px]">
+            <div
+                class="bg-[#02A3D3] flex justify-center items-center w-[30px] h-[30px] rounded-[6px]"
+            >
+                <img
+                    src="./assets/icons/disturb.png"
+                    alt=""
+                    class="w-[20px] h-[20px] cursor-pointer"
+                />
+            </div>
+            <div class="border-r-[2px] border-[#00000029] h-[30px]"></div>
+            <div class="card flex justify-content-center">
+                <languages></languages>
+            </div>
+            <div class="border-r-[2px] border-[#00000029] h-[30px]"></div>
+            <div class="flex gap-[10px] cursor-pointer">
+                <a [routerLink]="['/sign-in']">
+                    <mat-icon class="text-[#02A3D3] text-[30px]"
+                        >account_circle</mat-icon
+                    >
+                </a>
+                <a
+                    class="font-semibold text-[16px]"
+                    [routerLink]="['/sign-in']"
+                    >{{ "kirish" | transloco }}</a
+                >
+            </div>
+        </div>
+    </div>

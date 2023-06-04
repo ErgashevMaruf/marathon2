@@ -7,7 +7,7 @@ scrollHeight="500px"
 <ng-template pTemplate="caption">
 <div class="flex justify-between">
     <div>
-        <p-dropdown [options]="city" [(ngModel)]="selectCity" optionLabel="label">
+        <p-dropdown [options]="clubs" [(ngModel)]="clubCity" optionLabel="name" (onChange)="filter($event.value)">
         </p-dropdown>
     </div>
 </div>

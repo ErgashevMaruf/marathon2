@@ -1,0 +1,21 @@
+<div class="w-full bg-[#F5F5F5] flex py-[35px] px-[30px] rounded-[20px] justify-between gap-[30px]">
+    <img src="./assets/pay/qr.png" alt="" class="max-w-[242px] h-[315px]">
+    <div class="flex flex-col justify-between">
+        <p class="text-[18px] font-medium mb-[20px]">"Yugur" issued you an invoice in the amount of 120 000 sum. For payment follow the link</p>
+    <a href="#" class="text-[18px] text-[#01A559] font-medium">https://checkout/paycom.uz/aaaaaaaaaaaaa</a>
+    <div class="flex gap-[40px]">
+        <div>
+            <p-radioButton value="sms" inputId="sms" [(ngModel)] = "type"></p-radioButton>
+        <label for="sms" class="ml-2">SMS</label>
+        </div>
+        <div>
+            <p-radioButton value="telegram" [(ngModel)] = "type" inputId="telegram"></p-radioButton>
+        <label for="telegram" class="ml-2">Telegram</label>
+        </div>
+    </div>
+    <div class="flex justify-between">
+        <button class="py-[12px] px-[40px] bg-[#B9B9B9] rounded-[14px] text-white">No,thanks</button>
+        <button class="py-[12px] px-[40px] bg-[#01A559] rounded-[14px] text-white">Send</button>
+    </div>
+    </div>
+</div>

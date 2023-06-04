@@ -1,0 +1,9 @@
+.after::after{
+    display: block;
+    content: '';
+    width: 50%;
+    height: 2px;
+    margin: 0 auto;
+    margin-top: 18px;
+    background: rgba(2, 163, 211, 0.19)
+}

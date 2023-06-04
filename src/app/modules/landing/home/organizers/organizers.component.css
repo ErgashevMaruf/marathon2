@@ -1,19 +1,9 @@
-.mat-icon{
+.mat-icon {
     height: 42px !important;
     width: 42px !important;
 }
-
-.card{
-    background: url('/assets/computer.png')
-}
-.calendarCustom{
-height: 20px !important;
-right: 5px !important;
-top: 8px !important
-}
-.comp{
-    background: url('/assets/computer.png') no-repeat center center/cover;
-    background: cover;
-    
-    background-size: 750px 570px;
+.calendarCustom {
+    height: 20px !important;
+    right: 5px !important;
+    top: 8px !important;
 }

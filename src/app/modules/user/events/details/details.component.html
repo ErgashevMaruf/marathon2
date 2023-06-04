@@ -1,1 +1,26 @@
-<p>{{course.title}}</p>
+<div class="w-full max-w-7xl mx-auto py-20 px-[30px] flex justify-between">
+<div class="w-full max-w-[800px] flex flex-col">
+    <div class="bg-white rounded-[20px] shadow-xl pb-[50px] mb-[50px]">
+        <img src="assets/images/Events/{{ event.image }}" class="rounded-t-[20px]" />
+    <div class="px-[60px]">
+        <h4 class="text-[#01A559] text-[30px] font-bold my-[22px]">{{event?.title}}</h4>
+    <p class="font-medium text-[#333333] event-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque labore alias accusantium voluptatum quia magni deleniti excepturi sit cum consequuntur culpa, quis nesciunt illo tempora saepe animi et. Est, Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus nulla a perspiciatis molestiae blanditiis quod. Amet dolorem non quod, officiis reiciendis qui minus eveniet doloribus sequi earum nobis mollitia Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, cumque. In cupiditate repellendus, itaque ipsam ducimus beatae facilis quod architecto minus dolor explicabo commodi necessitatibus perspiciatis quibusdam natus accusantium saepe. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem at expedita ullam, porro quod, sapiente consectetur error sit enim voluptatibus, obcaecati perferendis. Qui ipsam ducimus vero similique molestias perferendis vel.</p>
+    <div>
+        <p>Date: <span>{{event.date}}</span></p>
+        <p>Participants: <span>{{event.participants}}</span></p>
+        <p>Location: <span>{{event.location}}</span></p>
+        <p>Cost: <span>{{event.cost}}</span></p>
+    </div>
+    </div>
+    </div>
+    <button class="px-[60px] py-[15px] bg-[#01A559] text-white font-bold self-end
+    rounded-[12px]
+    " (click)="payment(event.id)">Join Us</button>
+</div>
+<div class="flex flex-col gap-[30px]">
+    <app-advertising imgWidth="380px" imgHeight="400px" verticalView="400px" nike="smallNike.jpg"></app-advertising>
+    <div class="h-[520px] overflow-hidden">
+        <app-eventsInfo></app-eventsInfo>
+    </div>
+</div>
+</div>

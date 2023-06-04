@@ -10,7 +10,7 @@ import { AuthService } from 'app/core/auth/auth.service';
 })
 export class CaruselComponent implements OnInit {
     @Input() numVisible = 4;
-    @Input() bg ='white'
+    @Input() bg = 'white'
     events: Events[];
     responsiveOptions: any[];
 
@@ -21,7 +21,7 @@ export class CaruselComponent implements OnInit {
         this.eventService.getEvent().subscribe(res => {
             this.events = res;
         })
-        this.eventService.getEventById('1009').subscribe(res=>{
+        this.eventService.getEventById('1009').subscribe(res => {
             console.log(res);
         })
 
@@ -43,16 +43,14 @@ export class CaruselComponent implements OnInit {
             }
         ];
     }
-    onclickJoin(event:any)
-{
+    onclickJoin(event: any) {
 
-    if(this.auth._authenticated)
-    {
-        this.router.navigateByUrl('/events/1002')
-    }
-    else{
-        this.router.navigateByUrl('/sign-in');
-    }
+        if (this.auth._authenticated) {
+            this.router.navigateByUrl(`/events/${event}`)
+        }
+        else {
+            this.router.navigateByUrl('/sign-in');
+        }
 
-}
+    }
 }

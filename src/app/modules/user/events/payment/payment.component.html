@@ -1,0 +1,35 @@
+<div class="w-full max-w-7xl mx-auto py-20 px-[30px] flex justify-between">
+    <div class="w-full max-w-[800px]">
+        <div class="bg-white flex rounded-[20px] shadow-xl mb-[30px]">
+                    <img src="assets/images/Events/{{ event?.image }}" class="rounded-[20px]
+                    h-[300px] w-[300px] object-center
+                    "
+                    />
+        <div class="px-[30px] flex flex-col justify-center">
+        <h4 class="text-[#01A559] text-[22px] font-bold mb-[10px]">{{event?.title}}</h4>
+        <p class="font-medium text-[#333333] event-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod sapiente debitis saepe consequuntur adipisci fugit temporibus quasi aperiam? Ad, ex cum explicabo consectetur illo odit ut ipsam nulla impedit asperiores?</p>
+        <div>
+            <p>Date: <span>{{event.date}}</span></p>
+            <p>Participants: <span>{{event.participants}}</span></p>
+            <p>Location: <span>{{event.location}}</span></p>
+            <p>Cost: <span>{{event.cost}}</span></p>
+        </div>
+        </div>
+        </div>
+        <div class="w-full h-[60px] bg-[#F5F5F5] flex items-center rounded-[30px] justify-between">
+            <p class="text-[18px] ml-[20px]">If you have special discounts, send a message to this page, wait for confirm</p>
+                <a [routerLink]="['/feedback']" class="p-[15px] bg-[#02A3D3] rounded-tr-[20px] rounded-br-[20px]"><mat-icon class="text-white text-[30px]">navigate_next</mat-icon></a>
+        </div>
+        <h3 class="font-bold mb-[30px]">
+            Payment
+            </h3>
+        <!-- <app-method></app-method> -->
+        <app-check></app-check>
+    </div>
+    <div class="flex flex-col gap-[30px]">
+        <app-advertising imgWidth="380px" imgHeight="400px" verticalView="400px" nike="smallNike.jpg"></app-advertising>
+        <div class="h-[520px] overflow-hidden">
+            <app-eventsInfo></app-eventsInfo>
+        </div>
+    </div>
+    </div>

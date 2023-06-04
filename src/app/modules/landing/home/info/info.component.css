@@ -1,18 +1,30 @@
-.info{
-    width:100%;
+.info {
+    width: 100%;
     max-width: 250px;
     height: 200px;
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.info p{
+.info p {
     font-size: 50px;
-    color:white;
+    color: white;
     font-weight: bold;
 }
 .info span {
-    color:white;
+    color: white;
     font-size: 22px;
+}
+@media only screen and (max-width: 1240px) {
+    .info {
+        width: 150px;
+        height: 150px;
+    }
+    .info p {
+        font-size: 25px;
+    }
+    .info span {
+        font-size: 15px;
+    }
 }
