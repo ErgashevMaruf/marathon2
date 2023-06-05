@@ -7,19 +7,19 @@ scrollHeight="500px"
 <ng-template pTemplate="caption">
 <div class="flex justify-between">
     <div class="searchTable">
-        <input  type="text" (input)="dt1.filterGlobal($event.target.value, 'contains')" placeholder="Event name" />
+        <input  type="text" (input)="dt1.filterGlobal($event.target.value, 'contains')" placeholder="Event name" class="pb-[10px]"/>
     </div>
-    <div class="searchTable">
+    <!-- <div class="searchTable">
         <input  type="text" (input)="dt1.filterGlobal($event.target.value, 'contains')" placeholder="ID" />
-    </div>
-    <div>
+    </div> -->
+    <!-- <div>
         <p-dropdown [options]="year" [(ngModel)]="selectYear" optionLabel="label">
         </p-dropdown>
     </div>
     <div>
         <p-dropdown [options]="city" [(ngModel)]="selectCity" optionLabel="label">
         </p-dropdown>
-    </div>
+    </div> -->
 </div>
 </ng-template>
     <ng-template pTemplate="body" let-score let-rowIndex="rowIndex">

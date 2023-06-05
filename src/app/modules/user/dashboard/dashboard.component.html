@@ -4,9 +4,10 @@
         <h3>ID:<span span class="text-[#01A559]">123435</span></h3>
     </div>
     <div class="w-full max-w-7xl mx-auto flex justify-between mb-[70px]">
-        <div class="w-full max-w-[920px] bg-white shadow-xl rounded-[20px]">
-            <app-pay></app-pay>
-        </div>
+        <div class="max-w-[920px] w-full bg-[#F5F5F5] mt-[30px] px-[10px] py-[10px]">
+            <h4 class="text-[22px] font-bold mb-[24px] ml-[15px]">All Events results</h4>
+                <app-score></app-score>
+            </div>
         <app-advertising imgWidth="300px" imgHeight="570px" verticalView="570px" nike="smallNike.jpg"></app-advertising>
     </div>
     <div class="w-full max-w-7xl mx-auto flex justify-between">
@@ -15,13 +16,16 @@
                 <h4 class="text-[22px] font-bold mb-[24px] ml-[15px]">Coming Events</h4>
                 <app-carusel [numVisible]="3" bg="#F5F5F5"></app-carusel>
             </div>
-                <div class="bg-[#F5F5F5] mt-[30px] px-[10px] py-[10px]">
-                <h4 class="text-[22px] font-bold mb-[24px] ml-[15px]">All Events results</h4>
-                    <app-score></app-score>
+            <h4 class="text-[22px] font-bold mb-[24px] ml-[15px] pt-[20px]">Pay</h4>
+
+                <div class="w-full max-w-[920px] bg-white shadow-xl rounded-[20px]">
+                    <app-pay></app-pay>
                 </div>
         </div>
-        <div class="w-[300px] bg-white rounded-b-[20px]">
-            <app-nearest></app-nearest>
+        <div class="w-[300px] rounded-[20px]">
+            <div class="bg-white rounded-[20px]">
+                <app-nearest></app-nearest>
+            </div>
         </div>
     </div>
 </div>
