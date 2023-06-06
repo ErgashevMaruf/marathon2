@@ -16,5 +16,4 @@ export class InfoComponent implements OnInit {
         this.eventInfo = res;
     })
   }
-
 }

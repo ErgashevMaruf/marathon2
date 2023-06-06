@@ -10,31 +10,31 @@
             <div class="w-[152px] font-semibold">
                 <p>Sog'lomlashtirish onlayn platformasi</p>
             </div>
-        </div>  
+        </div>
         <div class="nav__center">
             <ul class="flex gap-[40px] items-center" (click)="move($event)">
                 <li>
-                    <a href="#news" class="cool-link" >{{
+                    <a href="#news" class="cool-link hover" >{{
                         "yangiliklar" | transloco
                     }}</a>
                 </li>
                 <li>
-                    <a href="#score" class="cool-link">{{
+                    <a href="#score" class="cool-link hover">{{
                         "natijalar" | transloco
                     }}</a>
                 </li>
                 <li>
-                    <a href="#participants" class="cool-link">{{
+                    <a href="#participants" class="cool-link hover">{{
                         "ishtirokchilar" | transloco
                     }}</a>
                 </li>
                 <li>
-                    <a href="#organizers" class="cool-link">{{
+                    <a href="#organizers" class="cool-link hover">{{
                         "tashkilotchilar" | transloco
                     }}</a>
                 </li>
                 <li>
-                    <a href="#media" class="cool-link">{{ "media" | transloco }}</a>
+                    <a href="#media" class="cool-link hover">{{ "media" | transloco }}</a>
                 </li>
             </ul>
         </div>
@@ -60,7 +60,7 @@
                     >
                 </a>
                 <a
-                    class="font-semibold text-[16px]"
+                    class="font-semibold text-[16px] hover"
                     [routerLink]="['/sign-in']"
                     >{{ "kirish" | transloco }}</a
                 >

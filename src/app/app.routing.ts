@@ -79,7 +79,6 @@ export const appRoutes: Route[] = [
             {path: 'pay', loadChildren: () => import('app/modules/user/pay/pay.module').then(m => m.PayModule)},
             {path: 'settings', loadChildren: () => import('app/modules/user/settings/settings.module').then(m => m.settingsModule)},
             {path: 'profile', loadChildren: () => import('app/modules/user/profile/profile.module').then(m => m.profileModule)},
-
         ]
     }
 ];
