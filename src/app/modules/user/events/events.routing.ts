@@ -2,7 +2,6 @@ import { Route } from '@angular/router';
 import { EventsComponent } from './events.component';
 import { ListComponent } from './list/list.component';
 import { DetailsComponent } from './details/details.component';
-import { EventsResolver, eventResolver } from './events.resolvers';
 import { PaymentComponent } from './payment/payment.component';
 export const eventsRoutes: Route[] = [
     {

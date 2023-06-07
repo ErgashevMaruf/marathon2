@@ -50,6 +50,7 @@ export class CaruselComponent implements OnInit {
         }
         else {
             this.router.navigateByUrl('/sign-in');
+
         }
 
     }

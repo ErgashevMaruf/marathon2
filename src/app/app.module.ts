@@ -11,9 +11,11 @@ import { mockApiServices } from 'app/mock-api';
 import { LayoutModule } from 'app/layout/layout.module';
 import { AppComponent } from 'app/app.component';
 import { appRoutes } from 'app/app.routing';
-import { UserModule } from './modules/user/user.module';
+import { UserModule} from './modules/user/user.module';
 import { HttpClientModule } from "@angular/common/http";
 import { MatIconModule } from '@angular/material/icon';
+import { routeUser } from './modules/user/user.routing';
+import { routeAdmin } from './modules/admin/admin.module';
 const routerConfig: ExtraOptions = {
     preloadingStrategy: PreloadAllModules,
     scrollPositionRestoration: 'enabled'
@@ -26,7 +28,10 @@ const routerConfig: ExtraOptions = {
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
+
         RouterModule.forRoot(appRoutes, routerConfig),
+        RouterModule.forRoot(routeUser, routerConfig),
+        RouterModule.forRoot(routeAdmin, routerConfig),
 
         // Fuse, FuseConfig & FuseMockAPI
         FuseModule,
@@ -40,7 +45,7 @@ const routerConfig: ExtraOptions = {
         LayoutModule,
         UserModule,
         HttpClientModule,
-        MatIconModule
+        MatIconModule,
 
     ],
     bootstrap: [

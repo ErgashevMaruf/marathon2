@@ -29,6 +29,8 @@ export class LandingHomeComponent implements OnInit {
     ngOnInit(): void {
         console.log(this.selectedItem);
         this.listItems = [{ label: 'customGallery', value: 'Gallery' }, { label: 'customVideo', value: 'Video' }];
+        
+
     }
     setScheme(theme: Theme) {
         this._fuseConfigService.config = { theme }
@@ -38,4 +40,5 @@ export class LandingHomeComponent implements OnInit {
         console.log(section);
         document.querySelector(`${section}`).scrollIntoView({ behavior: 'smooth' });
     }
+
 }

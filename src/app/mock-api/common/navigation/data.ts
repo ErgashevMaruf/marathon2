@@ -53,30 +53,122 @@ export const defaultNavigation: FuseNavigationItem[] = [
         link : '/sign-out'
     }
 ];
-export const compactNavigation: FuseNavigationItem[] = [
+
+export const admin: FuseNavigationItem[] = [
     {
-        id   : 'example',
-        title: 'Example',
-        type : 'basic',
-        icon : 'heroicons_outline:chart-pie',
-        link : '/example'
-    }
-];
-export const futuristicNavigation: FuseNavigationItem[] = [
+        id      : 'profile',
+        title   : 'Profil',
+        type    : 'collapsable',
+        icon    : 'mat_outline:supervised_user_circle',
+        children: [
+            {
+                id      : 'profile.profiles',
+                title   : 'Profillar',
+                type    : 'basic',
+                icon    : 'heroicons_outline:user-group',
+                link: '/profiles'
+            },
+            {
+                id      : 'profile.role',
+                title   : 'Rollar',
+                type    : 'basic',
+                icon    : 'mat_outline:brightness_7',
+                link: '/role'
+            },
+        ]
+    },
     {
-        id   : 'example',
-        title: 'Example',
-        type : 'basic',
-        icon : 'heroicons_outline:chart-pie',
-        link : '/example'
-    }
-];
-export const horizontalNavigation: FuseNavigationItem[] = [
+        id      : 'report',
+        title   : 'Hisobotlar',
+        type    : 'collapsable',
+        icon    : 'mat_outline:list_alt',
+        children: [
+            {
+                id      : 'report.event',
+                title   : 'Tadbir',
+                type    : 'basic',
+                icon    : 'mat_outline:event',
+                link: '/allevent'
+            },
+            {
+                id      : 'report.score',
+                title   : 'Natija',
+                type    : 'basic',
+                icon    : 'mat_outline:score',
+                link: '/score'
+            },
+            {
+                id      : 'report.organizer',
+                title   : 'Tashkilot',
+                type    : 'basic',
+                icon    : 'mat_outline:location_city',
+                link: '/organizer'
+            },
+            {
+                id      : 'report.club',
+                title   : 'Klub',
+                type    : 'basic',
+                icon    : 'mat_outline:class',
+                link: '/club'
+            },
+
+        ],
+    },
     {
-        id   : 'example',
-        title: 'Example',
-        type : 'basic',
-        icon : 'heroicons_outline:chart-pie',
-        link : '/example'
-    }
-];
+        id:'finance',
+        title:'Moliya hisobotlar',
+        type:'basic',
+        icon:'mat_outline:monetization_on',
+        link:'/finance'
+    },
+    {
+        id      : 'info',
+        title   : `Ma'lumot`,
+        type    : 'collapsable',
+        icon    : 'mat_outline:badge',
+        children: [
+            {
+                id      : 'info.event',
+                title   : 'Tadbir',
+                type    : 'basic',
+                icon    : 'mat_outline:event',
+                link: '/cevent'
+            },
+            {
+                id      : 'info.score',
+                title   : `E'lon`,
+                type    : 'basic',
+                icon    : 'heroicons_outline:speakerphone',
+                link: '/announcement'
+            },
+            {
+                id      : 'info.advertising',
+                title   : 'Reklama',
+                type    : 'basic',
+                icon    : 'money',
+                link: '/advertising'
+            },
+            {
+                id      : 'info.club',
+                title   : 'Klub',
+                type    : 'basic',
+                icon    : 'mat_outline:class',
+                link: '/cclub'
+            },
+        ],
+    },
+    {
+        id:'privilege',
+        title:'Imtiyoz',
+        type:'basic',
+        icon:'list_alt',
+        link:'/privilege'
+    },
+    {
+        id:'sms',
+        title:'Xabarlar',
+        type:'basic',
+        icon:'message',
+        link:'/message'
+    },
+]

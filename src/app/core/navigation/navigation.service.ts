@@ -36,9 +36,17 @@ export class NavigationService
     /**
      * Get all navigation data
      */
-    get(): Observable<Navigation>
+    getuser(): Observable<Navigation>
     {
-        return this._httpClient.get<Navigation>('api/common/navigation').pipe(
+        return this._httpClient.get<Navigation>('api/common/navigation/user').pipe(
+            tap((navigation) => {
+                this._navigation.next(navigation);
+            })
+        );
+    }
+    getadmin(): Observable<Navigation>
+    {
+        return this._httpClient.get<Navigation>('api/common/navigation/admin').pipe(
             tap((navigation) => {
                 this._navigation.next(navigation);
             })
