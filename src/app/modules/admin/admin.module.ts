@@ -21,6 +21,8 @@ import { OrganizerComponent } from './report/organizer/organizer.component';
 import { TableModule } from 'primeng/table';
 import { InputTextModule } from 'primeng/inputtext';
 import {MatIconModule} from '@angular/material/icon';
+import { PasswordModule } from 'primeng/password';
+import { EditComponent } from './profile/profiles/edit/edit.component';
 export const routeAdmin: Route[]=[
     {
         path: '',
@@ -52,8 +54,9 @@ export const routeAdmin: Route[]=[
     CommonModule,
     TableModule,
     InputTextModule,
-    MatIconModule
+    MatIconModule,
+    PasswordModule
   ],
-  declarations: [AdminComponent,ProfilesComponent,]
+  declarations: [AdminComponent,ProfilesComponent,EditComponent]
 })
 export class AdminModule { }

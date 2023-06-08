@@ -23,7 +23,7 @@
             </ng-template>
             <ng-template pTemplate="header">
                 <tr>
-                    <th style="min-width:15rem">
+                    <th style="min-width:200px">
                         <div class="flex align-items-center">
                             ID
                             <p-columnFilter type="text" field="id" display="menu"></p-columnFilter>
@@ -35,52 +35,33 @@
                             <p-columnFilter type="text" field="fish" display="menu"></p-columnFilter>
                         </div>
                     </th>
-                    <th style="min-width:15rem">
+                    <th style="min-width:200px">
                         <div class="flex align-items-center">
                             PINFL
-                            <p-columnFilter field="pinfl" matchMode="in" display="menu" [showMatchModes]="false" [showOperator]="false" [showAddButton]="false">
-                                <ng-template pTemplate="header">
-                                    <div class="px-3 pt-3 pb-0">
-                                        <span class="font-bold">Agent Picker</span>
-                                    </div>
-                                </ng-template>
-                                <ng-template pTemplate="filter" let-value let-filter="filterCallback">
-                                    <p-multiSelect [ngModel]="value" [options]="representatives" placeholder="Any" (onChange)="filter($event.value)" optionLabel="name">
-                                        <ng-template let-option pTemplate="item">
-                                            <div class="inline-block vertical-align-middle">
-                                                <img [alt]="option.label" src="https://primefaces.org/cdn/primeng/images/demo/avatar/{{ option.image }}" width="24" class="vertical-align-middle" />
-                                                <span class="ml-1 mt-1">{{ option.name }}</span>
-                                            </div>
-                                        </ng-template>
-                                    </p-multiSelect>
-                                </ng-template>
-                            </p-columnFilter>
+                            <p-columnFilter type="text" field="pinfl" display="menu"></p-columnFilter>
                         </div>
                     </th>
                     <th style="min-width:10rem">
                         <div class="flex align-items-center">
                             Tel
-                            <p-columnFilter type="date" field="tel" display="menu"></p-columnFilter>
+                            <p-columnFilter type="text" field="tel" display="menu"></p-columnFilter>
                         </div>
                     </th>
                     <th style="min-width:10rem">
                         <div class="flex align-items-center">
                             Login
-                            <p-columnFilter type="numeric" field="login" display="menu" currency="USD"></p-columnFilter>
+                            <p-columnFilter type="text" field="login" display="menu"></p-columnFilter>
                         </div>
                     </th>
-                    <th style="min-width:10rem">
+                    <th style="min-width:100px">
                         <div class="flex align-items-center">
                             Registration Date
-                            <p-columnFilter field="date" matchMode="equals" display="menu">
-                                <ng-template pTemplate="filter" let-value let-filter="filterCallback">
-                                    <p-dropdown [ngModel]="value" [options]="statuses" (onChange)="filter($event.value)" placeholder="Any">
-                                        <ng-template let-option pTemplate="item">
-                                            <p-tag [value]="option.value" [severity]="getSeverity(option.label)"></p-tag>
-                                        </ng-template>
-                                    </p-dropdown>
-                                </ng-template>
-                            </p-columnFilter>
+                            <p-columnFilter type="date" field="date" display="menu"></p-columnFilter>
+                        </div>
+                    </th>
+                    <th style="min-width:100px">
+                        <div class="flex align-items-center">
+                            Change
                         </div>
                     </th>
                 </tr>
@@ -103,14 +84,13 @@
                         {{user.login}}
                     </td>
                     <td class="text-center">
-                        {{user.date}}
+                        {{user.date | date:'MM.dd.yyyy'}}
 
                     </td>
                     <td>
                         <div class="flex">
-                            <mat-icon svgIcon="heroicons_outline:eye"></mat-icon>
-                        <mat-icon svgIcon="mat_outline:edit"></mat-icon>
-                        <mat-icon svgIcon="mat_outline:delete"></mat-icon>
+                        <mat-icon (click)="openDialog(user)" svgIcon="mat_outline:edit" class="cursor-pointer hover:text-[#01A559]"></mat-icon>
+                        <mat-icon svgIcon="mat_outline:delete" class="cursor-pointer hover:text-red-800" (click)="remove(user)"></mat-icon>
                         </div>
                     </td>
                 </tr>

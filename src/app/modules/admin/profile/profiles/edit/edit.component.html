@@ -1,0 +1,40 @@
+
+    <div class="w-full max-w-[950px] p-[15px] mx-auto">
+        <h3 class="mb-[20px]">{{user.fish}}</h3>
+        <div class="flex flex-wrap gap-[30px] mb-[30px]">
+            <div class="input-field">
+                <label>ID Number</label>
+                <input type=""  [value]="user.id" disabled class="bg-[#f5f5f5]">
+            </div>
+            <div class="input-field">
+                <label>PINFL</label>
+                <input type="text"  [value]="user.pinfl" disabled class="bg-[#f5f5f5]">
+            </div>
+            <div class="input-field">
+                <label>TEL</label>
+                <input type="text" [value]="user.tel" disabled class="bg-[#f5f5f5]">
+            </div>
+            <div class="input-field">
+                <label>Registration Date</label>
+                <input type="text" value={{user.date}} disabled class="bg-[#f5f5f5]">
+            </div>
+        </div>
+        <div class="flex flex-wrap gap-[30px] mb-[30px]">
+            <div class="input-field">
+                <label>Login</label>
+                <input type="text"  required [value]="user.login">
+            </div>
+            <div class="input-field">
+                <label>Parol</label>
+                <input type="text"  required>
+            </div>
+            <div class="input-field">
+                <label>Parolni qaytadan kiriting</label>
+                <input type="text"  required>
+            </div>
+        </div>
+        <div class="flex justify-between gap-[40px]">
+            <button class="px-[30px] w-full py-[15px] bg-red-600 text-white rounded-[14px]" (click)="closeDialog()">Yopish</button>
+            <button class="px-[30px] w-full py-[15px] bg-[#02A3D3] text-white rounded-[14px]" (click)="updateuser(user)">Saqlash</button>
+        </div>
+    </div>

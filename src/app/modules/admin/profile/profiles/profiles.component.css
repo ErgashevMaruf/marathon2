@@ -1,0 +1,10 @@
+:host ::ng-deep .p-datatable .p-datatable-tbody > tr > td{
+    border-bottom: 1px solid rgba(2, 163, 211, 0.19);
+    font-size: 13px;
+    font-weight: 500;
+    padding-bottom: 5px;
+}
+:host ::ng-deep .p-datatable .p-datatable-tbody > tr > td:first-child{
+    border-right: 1px solid rgba(2, 163, 211, 0.19);
+    padding-right: 5px;
+}

@@ -1,6 +1,6 @@
 export const user = [
     {
-        id: 12345671,
+        id: 123456711,
         fish: `Tursunov Bekzod Ahrorivich `,
         pinfl: 123456789102331,
         tel:'+9989013226566',
@@ -37,7 +37,7 @@ export const user = [
         pinfl: 123456789102335,
         tel:'+9989013226566',
         login: 'ergashev',
-        date: '10.11.2012'
+        date: '2015-09-13'
     },
     {
         id: 12345676,
